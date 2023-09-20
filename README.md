@@ -3,7 +3,6 @@
 sample test repo
 
 **Prerequisite**
-Make sure nodejs 
 1. Install Node.js and NPM
      https://nodejs.org/en/download/
       
