@@ -2,14 +2,18 @@
 # foodtest
 sample test repo
 
-**Prerequisites**
-1. Install python 
+**Prerequisite**
+Make sure nodejs 
+1. Install Node.js and NPM
+     https://nodejs.org/en/download/
+      
+3. Install python 
    Python 3.11.5  [PIP will install along with python install]
 
-2. pip install robotframework
-3. pip install robotframework-browser
-4. rfbrowser init
-5. IDE tool: Visual studio code
+4. pip install robotframework
+5. pip install robotframework-browser
+6. rfbrowser init
+7. IDE tool: Visual studio code
      - Go to extensions
        - search for 'robocorp'
        - install "Robot Framework Language Server"
@@ -18,6 +22,7 @@ sample test repo
 
 ### quick check versions ###
 --------------------
+- node --version (v18.13.0)
 - python --version
 - pip --version
 - robot --version
