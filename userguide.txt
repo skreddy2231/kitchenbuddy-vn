@@ -1,0 +1,20 @@
+1) run tests in command line 
+
+without GUI:
+------------
+> robot -d .\results\ BROWSER:chrome .\MenuCart\KitchenBuddy.robot
+ 
+ (or)
+
+ With GUI load:
+ --------------
+> robot -d .\results\ .\MenuCart\KitchenBuddy.robot
+
+2) run batch file execution
+- refer file <batchrun.bat>
+- double click for run
+
+3) [simple way]
+- open <KitchenBuddy.robot> file
+- right click
+- click on "Run Tests in Current File"

@@ -1,0 +1,23 @@
+No.of active customer orders:'4'
+Table:     Restaurant (26)
+   2645 (#115993695)
+       1x  [Vegan Idli] vegan ghee podi idli
+**************************************
+Table:     Restaurant (3)
+   2646 (#115993701)
+       1x  [Vegan Chaat] Vegan Chat Platter
+       1x  [Vegan Chaat] vegan vada pav
+**************************************
+Table:     Restaurant (32)
+   2647 (#115993707)
+       1x  [Uthappam] Onion Uthappam
+       1x  [Uthappam] Onion Podi Uthappam
+       2x  [Uthappam] Tomato Chilly Uthappam
+       1x  [Uthappam] vegetable uthappam
+**************************************
+Table:     Restaurant (8)
+   2648 (#115993711)
+       1x  [Beer] Tap Beer(Heineken)
+       1x  [Beer] non alcohol
+       1x  [Beer] Grolsch
+**************************************
