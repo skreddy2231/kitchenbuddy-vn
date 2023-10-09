@@ -1,7 +1,7 @@
-# browser/screenshot/**
-# browser/traces/**
-# *.xml
-# *.html
-# /results
-# *screenshot*.png
-# *.lock
+browser/screenshot/**
+browser/traces/**
+*.xml
+*.html
+/results
+*screenshot*.png
+*.lock
