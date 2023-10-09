@@ -1,38 +1,44 @@
-{"level":30,"time":"2023-09-19T20:45:59.282Z","pid":24036,"hostname":"nlleq0413002319","msg":"Listening on 49333"}
-{"level":30,"time":"2023-09-19T20:45:59.761Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-19T20:45:59.762Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-19T20:45:59.766Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-19T20:45:59.766Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-19T20:45:59.771Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method newBrowser"}
-{"level":30,"time":"2023-09-19T20:46:01.743Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method newBrowser"}
-{"level":30,"time":"2023-09-19T20:46:01.748Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method newContext"}
-{"level":30,"time":"2023-09-19T20:46:01.748Z","pid":24036,"hostname":"nlleq0413002319","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2023-09-19T20:46:01.748Z","pid":24036,"hostname":"nlleq0413002319","msg":"Trace file: "}
-{"level":30,"time":"2023-09-19T20:46:01.763Z","pid":24036,"hostname":"nlleq0413002319","msg":"Changed active context"}
-{"level":30,"time":"2023-09-19T20:46:01.763Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method newContext"}
-{"level":30,"time":"2023-09-19T20:46:01.769Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method newPage"}
-{"level":30,"time":"2023-09-19T20:46:01.769Z","pid":24036,"hostname":"nlleq0413002319","msg":"currentBrowser: [object Object]"}
-{"level":30,"time":"2023-09-19T20:46:02.249Z","pid":24036,"hostname":"nlleq0413002319","msg":"Video path: undefined"}
-{"level":30,"time":"2023-09-19T20:46:02.249Z","pid":24036,"hostname":"nlleq0413002319","msg":"Changed active page"}
-{"level":30,"time":"2023-09-19T20:46:03.175Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method newPage"}
-{"level":30,"time":"2023-09-19T20:46:04.182Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method takeScreenshot"}
-{"level":30,"time":"2023-09-19T20:46:04.182Z","pid":24036,"hostname":"nlleq0413002319","Take screenshot with options: ":{"path":"C:\\TestQA\\Twilight\\automation\\foodstore\\results\\browser\\screenshot\\robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
-{"level":30,"time":"2023-09-19T20:46:04.741Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method takeScreenshot"}
-{"level":30,"time":"2023-09-19T20:46:04.748Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method fillText"}
-{"level":30,"time":"2023-09-19T20:46:04.749Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with [name=\"login\"] in page."}
-{"level":30,"time":"2023-09-19T20:46:04.796Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method fillText"}
-{"level":30,"time":"2023-09-19T20:46:04.799Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method fillText"}
-{"level":30,"time":"2023-09-19T20:46:04.799Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with [name=\"password\"] in page."}
-{"level":30,"time":"2023-09-19T20:46:04.827Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method fillText"}
-{"level":30,"time":"2023-09-19T20:46:04.830Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method click"}
-{"level":30,"time":"2023-09-19T20:46:04.830Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
-{"level":30,"time":"2023-09-19T20:46:08.849Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method click"}
-{"level":30,"time":"2023-09-19T20:46:09.870Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2023-09-19T20:46:09.870Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with span:has-text(\"Logged in as Vegnation\") in page."}
-{"level":30,"time":"2023-09-19T20:46:09.926Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2023-09-19T20:46:09.934Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getElement"}
-{"level":30,"time":"2023-09-19T20:46:09.934Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div#kitchen-orders:has-text(\"There are no orders yet.\") in page."}
-{"level":30,"time":"2023-09-19T20:46:19.936Z","pid":24036,"hostname":"nlleq0413002319","msg":"Error of node method  getElement"}
+{"level":30,"time":"2023-10-09T20:19:21.712Z","pid":42124,"hostname":"nlleq0413002319","msg":"Listening on 61451"}
+{"level":30,"time":"2023-10-09T20:19:21.778Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-09T20:19:21.778Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-09T20:19:21.782Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-09T20:19:21.782Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-09T20:19:21.787Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2023-10-09T20:19:23.377Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method newBrowser"}
+{"level":30,"time":"2023-10-09T20:19:23.383Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method newContext"}
+{"level":30,"time":"2023-10-09T20:19:23.383Z","pid":42124,"hostname":"nlleq0413002319","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-10-09T20:19:23.383Z","pid":42124,"hostname":"nlleq0413002319","msg":"Trace file: "}
+{"level":30,"time":"2023-10-09T20:19:23.396Z","pid":42124,"hostname":"nlleq0413002319","msg":"Changed active context"}
+{"level":30,"time":"2023-10-09T20:19:23.396Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method newContext"}
+{"level":30,"time":"2023-10-09T20:19:23.402Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method newPage"}
+{"level":30,"time":"2023-10-09T20:19:23.402Z","pid":42124,"hostname":"nlleq0413002319","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2023-10-09T20:19:23.646Z","pid":42124,"hostname":"nlleq0413002319","msg":"Video path: undefined"}
+{"level":30,"time":"2023-10-09T20:19:23.646Z","pid":42124,"hostname":"nlleq0413002319","msg":"Changed active page"}
+{"level":30,"time":"2023-10-09T20:19:24.293Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method newPage"}
+{"level":30,"time":"2023-10-09T20:19:25.302Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-10-09T20:19:25.302Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with [name=\"login\"] in page."}
+{"level":30,"time":"2023-10-09T20:19:25.354Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method fillText"}
+{"level":30,"time":"2023-10-09T20:19:25.358Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method fillText"}
+{"level":30,"time":"2023-10-09T20:19:25.358Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with [name=\"password\"] in page."}
+{"level":30,"time":"2023-10-09T20:19:25.375Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method fillText"}
+{"level":30,"time":"2023-10-09T20:19:25.378Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-09T20:19:25.378Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with id=login-button in page."}
+{"level":30,"time":"2023-10-09T20:19:27.207Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method click"}
+{"level":30,"time":"2023-10-09T20:19:28.217Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-10-09T20:19:28.217Z","pid":42124,"hostname":"nlleq0413002319","Take screenshot with options: ":{"path":"C:\\TestQA\\Twilight\\rf-2023\\kitchenbuddy-vn\\results\\browser\\screenshot\\robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2023-10-09T20:19:28.325Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-10-09T20:19:28.330Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-09T20:19:28.330Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with button.tables in page."}
+{"level":30,"time":"2023-10-09T20:19:28.342Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-09T20:19:28.344Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-09T20:19:28.344Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with button.tables in page."}
+{"level":30,"time":"2023-10-09T20:19:28.383Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method click"}
+{"level":30,"time":"2023-10-09T20:19:28.386Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-09T20:19:28.386Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div[table-id]:nth-child(2) in page."}
+{"level":30,"time":"2023-10-09T20:19:28.602Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-09T20:19:28.606Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getElement"}
+{"level":30,"time":"2023-10-09T20:19:28.606Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div#kitchen-orders:has-text(\"There are no orders yet.\") in page."}
+{"level":30,"time":"2023-10-09T20:19:38.609Z","pid":42124,"hostname":"nlleq0413002319","msg":"Error of node method  getElement"}
 ================= Original suppressed error =================
 locator.waitFor: Timeout 10000ms exceeded.
 =========================== logs ===========================
@@ -43,179 +49,129 @@ waiting for locator('div#kitchen-orders:has-text("There are no orders yet.")')
   name: 'TimeoutError'
 }
 =============================================================
-{"level":30,"time":"2023-09-19T20:46:19.943Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method takeScreenshot"}
-{"level":30,"time":"2023-09-19T20:46:19.943Z","pid":24036,"hostname":"nlleq0413002319","Take screenshot with options: ":{"path":"C:\\TestQA\\Twilight\\automation\\foodstore\\results\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
-{"level":30,"time":"2023-09-19T20:46:20.112Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method takeScreenshot"}
-{"level":30,"time":"2023-09-19T20:46:20.121Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method waitForElementState"}
-{"level":30,"time":"2023-09-19T20:46:20.121Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1) in page."}
-{"level":30,"time":"2023-09-19T20:46:20.127Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method waitForElementState"}
-{"level":30,"time":"2023-09-19T20:46:20.132Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getElements"}
-{"level":30,"time":"2023-09-19T20:46:20.134Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is disabled, return Locator: div.content>div#kitchen-orders>div[data-id] in page."}
-{"level":30,"time":"2023-09-19T20:46:20.134Z","pid":24036,"hostname":"nlleq0413002319","msg":"Wait element to reach attached state."}
-{"level":30,"time":"2023-09-19T20:46:20.146Z","pid":24036,"hostname":"nlleq0413002319","msg":"Found 4 elements."}
-{"level":30,"time":"2023-09-19T20:46:20.146Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getElements"}
-{"level":30,"time":"2023-09-19T20:46:20.150Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getElement"}
-{"level":30,"time":"2023-09-19T20:46:20.150Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-time in page."}
-{"level":30,"time":"2023-09-19T20:46:20.156Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getElement"}
-{"level":30,"time":"2023-09-19T20:46:20.159Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:20.159Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-time in page."}
-{"level":30,"time":"2023-09-19T20:46:20.183Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-time containing Restaurant (26)"}
-{"level":30,"time":"2023-09-19T20:46:20.183Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:20.187Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:20.187Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchenrow-id in page."}
-{"level":30,"time":"2023-09-19T20:46:20.202Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchenrow-id containing 2645 (#115993695)"}
-{"level":30,"time":"2023-09-19T20:46:20.203Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:20.206Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getElements"}
-{"level":30,"time":"2023-09-19T20:46:20.206Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is disabled, return Locator: div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr in page."}
-{"level":30,"time":"2023-09-19T20:46:20.206Z","pid":24036,"hostname":"nlleq0413002319","msg":"Wait element to reach attached state."}
-{"level":30,"time":"2023-09-19T20:46:20.212Z","pid":24036,"hostname":"nlleq0413002319","msg":"Found 1 elements."}
-{"level":30,"time":"2023-09-19T20:46:20.212Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getElements"}
-{"level":30,"time":"2023-09-19T20:46:20.215Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:20.215Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(1) in page."}
-{"level":30,"time":"2023-09-19T20:46:20.233Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:20.233Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(1) containing 1x"}
-{"level":30,"time":"2023-09-19T20:46:20.236Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:20.236Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(2)>b in page."}
-{"level":30,"time":"2023-09-19T20:46:20.253Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(2)>b containing [Vegan Idli] vegan ghee podi idli"}
-{"level":30,"time":"2023-09-19T20:46:20.254Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:20.258Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method click"}
-{"level":30,"time":"2023-09-19T20:46:20.258Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>button:has-text(\"Ready\") in page."}
-{"level":30,"time":"2023-09-19T20:46:20.315Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method click"}
-{"level":30,"time":"2023-09-19T20:46:22.325Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getElement"}
-{"level":30,"time":"2023-09-19T20:46:22.325Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-time in page."}
-{"level":30,"time":"2023-09-19T20:46:22.333Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getElement"}
-{"level":30,"time":"2023-09-19T20:46:22.337Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:22.337Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-time in page."}
-{"level":30,"time":"2023-09-19T20:46:22.358Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-time containing Restaurant (3)"}
-{"level":30,"time":"2023-09-19T20:46:22.358Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:22.361Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:22.361Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchenrow-id in page."}
-{"level":30,"time":"2023-09-19T20:46:22.385Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchenrow-id containing 2646 (#115993701)"}
-{"level":30,"time":"2023-09-19T20:46:22.385Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:22.389Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getElements"}
-{"level":30,"time":"2023-09-19T20:46:22.389Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is disabled, return Locator: div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr in page."}
-{"level":30,"time":"2023-09-19T20:46:22.389Z","pid":24036,"hostname":"nlleq0413002319","msg":"Wait element to reach attached state."}
-{"level":30,"time":"2023-09-19T20:46:22.396Z","pid":24036,"hostname":"nlleq0413002319","msg":"Found 2 elements."}
-{"level":30,"time":"2023-09-19T20:46:22.396Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getElements"}
-{"level":30,"time":"2023-09-19T20:46:22.399Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:22.399Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(1) in page."}
-{"level":30,"time":"2023-09-19T20:46:22.419Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(1) containing 1x"}
-{"level":30,"time":"2023-09-19T20:46:22.419Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:22.422Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:22.422Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(2)>b in page."}
-{"level":30,"time":"2023-09-19T20:46:22.442Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(2)>b containing [Vegan Chaat] Vegan Chat Platter"}
-{"level":30,"time":"2023-09-19T20:46:22.443Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:22.447Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:22.447Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(2)>td:nth-child(1) in page."}
-{"level":30,"time":"2023-09-19T20:46:22.464Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(2)>td:nth-child(1) containing 1x"}
-{"level":30,"time":"2023-09-19T20:46:22.464Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:22.466Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:22.467Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(2)>td:nth-child(2)>b in page."}
-{"level":30,"time":"2023-09-19T20:46:22.485Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(2)>td:nth-child(2)>b containing [Vegan Chaat] vegan vada pav"}
-{"level":30,"time":"2023-09-19T20:46:22.486Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:22.491Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method click"}
-{"level":30,"time":"2023-09-19T20:46:22.491Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>button:has-text(\"Ready\") in page."}
-{"level":30,"time":"2023-09-19T20:46:22.531Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method click"}
-{"level":30,"time":"2023-09-19T20:46:24.537Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getElement"}
-{"level":30,"time":"2023-09-19T20:46:24.537Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-time in page."}
-{"level":30,"time":"2023-09-19T20:46:24.541Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getElement"}
-{"level":30,"time":"2023-09-19T20:46:24.544Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.544Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-time in page."}
-{"level":30,"time":"2023-09-19T20:46:24.565Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-time containing Restaurant (32)"}
-{"level":30,"time":"2023-09-19T20:46:24.565Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.569Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.569Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchenrow-id in page."}
-{"level":30,"time":"2023-09-19T20:46:24.587Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchenrow-id containing 2647 (#115993707)"}
-{"level":30,"time":"2023-09-19T20:46:24.587Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.590Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getElements"}
-{"level":30,"time":"2023-09-19T20:46:24.591Z","pid":24036,"hostname":"nlleq0413002319","msg":"Wait element to reach attached state."}
-{"level":30,"time":"2023-09-19T20:46:24.591Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is disabled, return Locator: div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr in page."}
-{"level":30,"time":"2023-09-19T20:46:24.601Z","pid":24036,"hostname":"nlleq0413002319","msg":"Found 4 elements."}
-{"level":30,"time":"2023-09-19T20:46:24.601Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getElements"}
-{"level":30,"time":"2023-09-19T20:46:24.607Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.607Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(1) in page."}
-{"level":30,"time":"2023-09-19T20:46:24.631Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(1) containing 1x"}
-{"level":30,"time":"2023-09-19T20:46:24.632Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.635Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.635Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(2)>b in page."}
-{"level":30,"time":"2023-09-19T20:46:24.667Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(2)>b containing [Uthappam] Onion Uthappam"}
-{"level":30,"time":"2023-09-19T20:46:24.667Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.671Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.671Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(2)>td:nth-child(1) in page."}
-{"level":30,"time":"2023-09-19T20:46:24.692Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(2)>td:nth-child(1) containing 1x"}
-{"level":30,"time":"2023-09-19T20:46:24.692Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.695Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.695Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(2)>td:nth-child(2)>b in page."}
-{"level":30,"time":"2023-09-19T20:46:24.715Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(2)>td:nth-child(2)>b containing [Uthappam] Onion Podi Uthappam"}
-{"level":30,"time":"2023-09-19T20:46:24.715Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.719Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(3)>td:nth-child(1) in page."}
-{"level":30,"time":"2023-09-19T20:46:24.719Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.736Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(3)>td:nth-child(1) containing 2x"}
-{"level":30,"time":"2023-09-19T20:46:24.736Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.738Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.738Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(3)>td:nth-child(2)>b in page."}
-{"level":30,"time":"2023-09-19T20:46:24.755Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(3)>td:nth-child(2)>b containing [Uthappam] Tomato Chilly Uthappam"}
-{"level":30,"time":"2023-09-19T20:46:24.755Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.759Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.759Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(4)>td:nth-child(1) in page."}
-{"level":30,"time":"2023-09-19T20:46:24.787Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(4)>td:nth-child(1) containing 1x"}
-{"level":30,"time":"2023-09-19T20:46:24.787Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.790Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.790Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(4)>td:nth-child(2)>b in page."}
-{"level":30,"time":"2023-09-19T20:46:24.811Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(4)>td:nth-child(2)>b containing [Uthappam] vegetable uthappam"}
-{"level":30,"time":"2023-09-19T20:46:24.811Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:24.815Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method click"}
-{"level":30,"time":"2023-09-19T20:46:24.815Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>button:has-text(\"Ready\") in page."}
-{"level":30,"time":"2023-09-19T20:46:24.853Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method click"}
-{"level":30,"time":"2023-09-19T20:46:26.856Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getElement"}
-{"level":30,"time":"2023-09-19T20:46:26.856Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-time in page."}
-{"level":30,"time":"2023-09-19T20:46:26.861Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getElement"}
-{"level":30,"time":"2023-09-19T20:46:26.864Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-time in page."}
-{"level":30,"time":"2023-09-19T20:46:26.864Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:26.884Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-time containing Restaurant (8)"}
-{"level":30,"time":"2023-09-19T20:46:26.884Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:26.888Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:26.888Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchenrow-id in page."}
-{"level":30,"time":"2023-09-19T20:46:26.917Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchenrow-id containing 2648 (#115993711)"}
-{"level":30,"time":"2023-09-19T20:46:26.918Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:26.924Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is disabled, return Locator: div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr in page."}
-{"level":30,"time":"2023-09-19T20:46:26.924Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getElements"}
-{"level":30,"time":"2023-09-19T20:46:26.924Z","pid":24036,"hostname":"nlleq0413002319","msg":"Wait element to reach attached state."}
-{"level":30,"time":"2023-09-19T20:46:26.932Z","pid":24036,"hostname":"nlleq0413002319","msg":"Found 3 elements."}
-{"level":30,"time":"2023-09-19T20:46:26.932Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getElements"}
-{"level":30,"time":"2023-09-19T20:46:26.935Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:26.935Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(1) in page."}
-{"level":30,"time":"2023-09-19T20:46:26.954Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(1) containing 1x"}
-{"level":30,"time":"2023-09-19T20:46:26.954Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:26.957Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:26.957Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(2)>b in page."}
-{"level":30,"time":"2023-09-19T20:46:26.977Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(1)>td:nth-child(2)>b containing [Beer] Tap Beer(Heineken)"}
-{"level":30,"time":"2023-09-19T20:46:26.977Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:26.981Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:26.981Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(2)>td:nth-child(1) in page."}
-{"level":30,"time":"2023-09-19T20:46:26.998Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(2)>td:nth-child(1) containing 1x"}
-{"level":30,"time":"2023-09-19T20:46:26.998Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:27.000Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:27.000Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(2)>td:nth-child(2)>b in page."}
-{"level":30,"time":"2023-09-19T20:46:27.019Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(2)>td:nth-child(2)>b containing [Beer] non alcohol"}
-{"level":30,"time":"2023-09-19T20:46:27.019Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:27.023Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:27.023Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(3)>td:nth-child(1) in page."}
-{"level":30,"time":"2023-09-19T20:46:27.048Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(3)>td:nth-child(1) containing 1x"}
-{"level":30,"time":"2023-09-19T20:46:27.048Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:27.051Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:27.051Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(3)>td:nth-child(2)>b in page."}
-{"level":30,"time":"2023-09-19T20:46:27.069Z","pid":24036,"hostname":"nlleq0413002319","msg":"Retrieved text for element div.content>div#kitchen-orders>div[data-id]:nth-child(1)>div.kitchen-table-wrapper>>tbody>tr:nth-child(3)>td:nth-child(2)>b containing [Beer] Grolsch"}
-{"level":30,"time":"2023-09-19T20:46:27.069Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getText"}
-{"level":30,"time":"2023-09-19T20:46:27.073Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method click"}
-{"level":30,"time":"2023-09-19T20:46:27.073Z","pid":24036,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div.content>div#kitchen-orders>div[data-id]:nth-child(1)>button:has-text(\"Ready\") in page."}
-{"level":30,"time":"2023-09-19T20:46:27.124Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method click"}
-{"level":30,"time":"2023-09-19T20:46:29.184Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method takeScreenshot"}
-{"level":30,"time":"2023-09-19T20:46:29.184Z","pid":24036,"hostname":"nlleq0413002319","Take screenshot with options: ":{"path":"C:\\TestQA\\Twilight\\automation\\foodstore\\results\\browser\\screenshot\\robotframework-browser-screenshot-2.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
-{"level":30,"time":"2023-09-19T20:46:29.337Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method takeScreenshot"}
-{"level":30,"time":"2023-09-19T20:46:29.340Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method closeBrowser"}
-{"level":30,"time":"2023-09-19T20:46:29.354Z","pid":24036,"hostname":"nlleq0413002319","msg":"Removed page=d92a7b3b-ba55-4a38-a8c4-b036321c5e31 from context=48b27b06-f29c-4d94-aa48-a6bc9a3e901a page stack"}
-{"level":30,"time":"2023-09-19T20:46:29.624Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method closeBrowser"}
+{"level":30,"time":"2023-10-09T20:19:38.618Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-10-09T20:19:38.618Z","pid":42124,"hostname":"nlleq0413002319","Take screenshot with options: ":{"path":"C:\\TestQA\\Twilight\\rf-2023\\kitchenbuddy-vn\\results\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2023-10-09T20:19:38.694Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-10-09T20:19:38.702Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-09T20:19:38.702Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is disabled, return Locator: //div[@class=\"popup-content\"]/div[@table-id][@order-id] in page."}
+{"level":30,"time":"2023-10-09T20:19:38.702Z","pid":42124,"hostname":"nlleq0413002319","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-09T20:19:38.714Z","pid":42124,"hostname":"nlleq0413002319","msg":"Found 2 elements."}
+{"level":30,"time":"2023-10-09T20:19:38.714Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-09T20:19:38.718Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-09T20:19:38.718Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with (//div[@table-id][@order-id])[1] in page."}
+{"level":30,"time":"2023-10-09T20:19:38.722Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-09T20:19:38.724Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:38.724Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with (//div[@table-id][@order-id])[1] in page."}
+{"level":30,"time":"2023-10-09T20:19:38.744Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved text for element (//div[@table-id][@order-id])[1] containing 28\n28,50"}
+{"level":30,"time":"2023-10-09T20:19:38.744Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:38.747Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-09T20:19:38.747Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //div[@class=\"popup-content\"]/div[@table-id][@order-id] >> nth=0 in page."}
+{"level":30,"time":"2023-10-09T20:19:38.796Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method click"}
+{"level":30,"time":"2023-10-09T20:19:39.802Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-09T20:19:39.802Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div#pos-ticket>h2[data-org] in page."}
+{"level":30,"time":"2023-10-09T20:19:39.809Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-09T20:19:39.811Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:39.811Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div#pos-ticket>h2[data-org] >span in page."}
+{"level":30,"time":"2023-10-09T20:19:39.832Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved text for element div#pos-ticket>h2[data-org] >span containing #117713944"}
+{"level":30,"time":"2023-10-09T20:19:39.832Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:39.834Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:39.834Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //div[@id=\"pos-ticket\"]/h2[text()][@data-org=\"Order\"] in page."}
+{"level":30,"time":"2023-10-09T20:19:39.844Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved text for element //div[@id=\"pos-ticket\"]/h2[text()][@data-org=\"Order\"] containing 28 #117713944"}
+{"level":30,"time":"2023-10-09T20:19:39.844Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:39.848Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-09T20:19:39.848Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is disabled, return Locator: //tbody/tr[@data-i] in page."}
+{"level":30,"time":"2023-10-09T20:19:39.848Z","pid":42124,"hostname":"nlleq0413002319","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-09T20:19:39.853Z","pid":42124,"hostname":"nlleq0413002319","msg":"Found 3 elements."}
+{"level":30,"time":"2023-10-09T20:19:39.853Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-09T20:19:39.857Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2023-10-09T20:19:39.858Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //tbody/tr[@data-i=\"0\"]/td[1]/input in page."}
+{"level":30,"time":"2023-10-09T20:19:39.869Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved attribute for element //tbody/tr[@data-i=\"0\"]/td[1]/input containing 1"}
+{"level":30,"time":"2023-10-09T20:19:39.869Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2023-10-09T20:19:39.872Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:39.872Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //tr[@data-i=\"0\"]/td[@class=\"desc\"] in page."}
+{"level":30,"time":"2023-10-09T20:19:39.889Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved text for element //tr[@data-i=\"0\"]/td[@class=\"desc\"] containing Chole Bhature\n"}
+{"level":30,"time":"2023-10-09T20:19:39.889Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:39.892Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:39.892Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //tr[@data-i=\"0\"]/td[@class=\"price\"] in page."}
+{"level":30,"time":"2023-10-09T20:19:39.910Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved text for element //tr[@data-i=\"0\"]/td[@class=\"price\"] containing € 10,00"}
+{"level":30,"time":"2023-10-09T20:19:39.911Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:39.918Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2023-10-09T20:19:39.918Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //tbody/tr[@data-i=\"1\"]/td[1]/input in page."}
+{"level":30,"time":"2023-10-09T20:19:39.928Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved attribute for element //tbody/tr[@data-i=\"1\"]/td[1]/input containing 1"}
+{"level":30,"time":"2023-10-09T20:19:39.928Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2023-10-09T20:19:39.931Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:39.931Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //tr[@data-i=\"1\"]/td[@class=\"desc\"] in page."}
+{"level":30,"time":"2023-10-09T20:19:39.947Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved text for element //tr[@data-i=\"1\"]/td[@class=\"desc\"] containing Dal Makhni\n"}
+{"level":30,"time":"2023-10-09T20:19:39.947Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:39.951Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:39.952Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //tr[@data-i=\"1\"]/td[@class=\"price\"] in page."}
+{"level":30,"time":"2023-10-09T20:19:39.965Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved text for element //tr[@data-i=\"1\"]/td[@class=\"price\"] containing € 10,00"}
+{"level":30,"time":"2023-10-09T20:19:39.965Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:39.972Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2023-10-09T20:19:39.972Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //tbody/tr[@data-i=\"2\"]/td[1]/input in page."}
+{"level":30,"time":"2023-10-09T20:19:39.984Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved attribute for element //tbody/tr[@data-i=\"2\"]/td[1]/input containing 1"}
+{"level":30,"time":"2023-10-09T20:19:39.985Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2023-10-09T20:19:39.988Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:39.988Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //tr[@data-i=\"2\"]/td[@class=\"desc\"] in page."}
+{"level":30,"time":"2023-10-09T20:19:40.002Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved text for element //tr[@data-i=\"2\"]/td[@class=\"desc\"] containing Tomato Chilly Uthappam\n"}
+{"level":30,"time":"2023-10-09T20:19:40.002Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:40.006Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:40.006Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //tr[@data-i=\"2\"]/td[@class=\"price\"] in page."}
+{"level":30,"time":"2023-10-09T20:19:40.021Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved text for element //tr[@data-i=\"2\"]/td[@class=\"price\"] containing € 8,50"}
+{"level":30,"time":"2023-10-09T20:19:40.021Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:40.102Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-09T20:19:40.102Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with button.tables in page."}
+{"level":30,"time":"2023-10-09T20:19:40.134Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method click"}
+{"level":30,"time":"2023-10-09T20:19:40.137Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-09T20:19:40.138Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with (//div[@table-id][@order-id])[2] in page."}
+{"level":30,"time":"2023-10-09T20:19:40.351Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-09T20:19:40.354Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:40.354Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with (//div[@table-id][@order-id])[2] in page."}
+{"level":30,"time":"2023-10-09T20:19:40.367Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved text for element (//div[@table-id][@order-id])[2] containing 36\n8,00"}
+{"level":30,"time":"2023-10-09T20:19:40.367Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:40.370Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-09T20:19:40.370Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //div[@class=\"popup-content\"]/div[@table-id][@order-id] >> nth=1 in page."}
+{"level":30,"time":"2023-10-09T20:19:40.616Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method click"}
+{"level":30,"time":"2023-10-09T20:19:41.621Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2023-10-09T20:19:41.621Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div#pos-ticket>h2[data-org] in page."}
+{"level":30,"time":"2023-10-09T20:19:41.631Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2023-10-09T20:19:41.634Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:41.634Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with div#pos-ticket>h2[data-org] >span in page."}
+{"level":30,"time":"2023-10-09T20:19:41.651Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved text for element div#pos-ticket>h2[data-org] >span containing #115992741"}
+{"level":30,"time":"2023-10-09T20:19:41.651Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:41.653Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:41.653Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //div[@id=\"pos-ticket\"]/h2[text()][@data-org=\"Order\"] in page."}
+{"level":30,"time":"2023-10-09T20:19:41.664Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved text for element //div[@id=\"pos-ticket\"]/h2[text()][@data-org=\"Order\"] containing 36 #115992741"}
+{"level":30,"time":"2023-10-09T20:19:41.664Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:41.667Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getElements"}
+{"level":30,"time":"2023-10-09T20:19:41.667Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is disabled, return Locator: //tbody/tr[@data-i] in page."}
+{"level":30,"time":"2023-10-09T20:19:41.667Z","pid":42124,"hostname":"nlleq0413002319","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2023-10-09T20:19:41.671Z","pid":42124,"hostname":"nlleq0413002319","msg":"Found 1 elements."}
+{"level":30,"time":"2023-10-09T20:19:41.671Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getElements"}
+{"level":30,"time":"2023-10-09T20:19:41.673Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getElementAttribute"}
+{"level":30,"time":"2023-10-09T20:19:41.673Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //tbody/tr[@data-i=\"0\"]/td[1]/input in page."}
+{"level":30,"time":"2023-10-09T20:19:41.681Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getElementAttribute"}
+{"level":30,"time":"2023-10-09T20:19:41.681Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved attribute for element //tbody/tr[@data-i=\"0\"]/td[1]/input containing 2"}
+{"level":30,"time":"2023-10-09T20:19:41.684Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:41.684Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //tr[@data-i=\"0\"]/td[@class=\"desc\"] in page."}
+{"level":30,"time":"2023-10-09T20:19:41.694Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved text for element //tr[@data-i=\"0\"]/td[@class=\"desc\"] containing Tap Beer(Heineken)\n"}
+{"level":30,"time":"2023-10-09T20:19:41.694Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:41.697Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:41.697Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //tr[@data-i=\"0\"]/td[@class=\"price\"] in page."}
+{"level":30,"time":"2023-10-09T20:19:41.706Z","pid":42124,"hostname":"nlleq0413002319","msg":"Retrieved text for element //tr[@data-i=\"0\"]/td[@class=\"price\"] containing € 8,00"}
+{"level":30,"time":"2023-10-09T20:19:41.706Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getText"}
+{"level":30,"time":"2023-10-09T20:19:41.789Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-09T20:19:41.789Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with button.tables in page."}
+{"level":30,"time":"2023-10-09T20:19:41.829Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method click"}
+{"level":30,"time":"2023-10-09T20:19:41.832Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method click"}
+{"level":30,"time":"2023-10-09T20:19:41.832Z","pid":42124,"hostname":"nlleq0413002319","msg":"Strict mode is enabled, find Locator with //div[contains(@class, \"popup popup-tables\")]//button[@class=\"popup-close-x\"] in page."}
+{"level":30,"time":"2023-10-09T20:19:42.313Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method click"}
+{"level":30,"time":"2023-10-09T20:19:42.318Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2023-10-09T20:19:42.318Z","pid":42124,"hostname":"nlleq0413002319","Take screenshot with options: ":{"path":"C:\\TestQA\\Twilight\\rf-2023\\kitchenbuddy-vn\\results\\browser\\screenshot\\robotframework-browser-screenshot-2.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2023-10-09T20:19:42.402Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2023-10-09T20:19:42.404Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2023-10-09T20:19:42.409Z","pid":42124,"hostname":"nlleq0413002319","msg":"Removed page=02d959a4-56cd-415b-86fb-0343ed18f6fe from context=03aea4ac-47f2-4726-a85f-9c3518ad33b7 page stack"}
+{"level":30,"time":"2023-10-09T20:19:42.455Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method closeBrowser"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\trbika\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9389:15)
@@ -224,8 +180,8 @@ Error: Browser has been closed.
     at handleUnary (C:\Users\trbika\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:833:17)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 =============================================================
-{"level":30,"time":"2023-09-19T20:46:29.629Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-19T20:46:29.629Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-09T20:19:42.461Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-09T20:19:42.461Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getBrowserCatalog"}
 ================= Original suppressed error =================
 Error: Browser has been closed.
     at PlaywrightState.getActiveBrowser (C:\Users\trbika\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\index.js:9389:15)
@@ -234,7 +190,7 @@ Error: Browser has been closed.
     at handleUnary (C:\Users\trbika\AppData\Local\Programs\Python\Python311\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:833:17)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 =============================================================
-{"level":30,"time":"2023-09-19T20:46:29.632Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-19T20:46:29.632Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-09-19T20:46:29.716Z","pid":24036,"hostname":"nlleq0413002319","msg":"Start of node method closeAllBrowsers"}
-{"level":30,"time":"2023-09-19T20:46:29.716Z","pid":24036,"hostname":"nlleq0413002319","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2023-10-09T20:19:42.471Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-09T20:19:42.471Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2023-10-09T20:19:42.524Z","pid":42124,"hostname":"nlleq0413002319","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2023-10-09T20:19:42.524Z","pid":42124,"hostname":"nlleq0413002319","msg":"End of node method closeAllBrowsers"}

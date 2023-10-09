@@ -25,4 +25,4 @@ KB-01: Load KitchenBuddy portal and fetch customer order details
     # As a "Admin" I want to open KitchenBuddy portal    ${BASEURL}
     Submit user details    ${GEBRUIKERSNAAM}    ${WACHTWOORD}
     As a "Admin" I want to fetch customer orders
-    Log    Test execution done!!
+    Log    V1: Test execution done!!

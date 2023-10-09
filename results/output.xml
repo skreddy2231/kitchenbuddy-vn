@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230919 22:45:58.302" rpa="false" schemaversion="4">
-<suite id="s1" name="KitchenBuddy" source="C:\TestQA\Twilight\automation\foodstore\MenuCart\KitchenBuddy.robot">
-<test id="s1-t1" name="KB-01: Load KitchenBuddy portal and fetch customer order details" line="22">
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231009 22:19:20.792" rpa="false" schemaversion="4">
+<suite id="s1" name="OrderList" source="C:\TestQA\Twilight\rf-2023\kitchenbuddy-vn\OrderBuddy\OrderList.robot">
+<test id="s1-t1" name="OrderBuddy_001: As an &quot;Administrator&quot;, I want to fetch customers orders in each table" line="21">
 <kw name="As a &quot;Admin&quot; I want to open KitchenBuddy portal" library="KitchenBuddy" type="SETUP" sourcename="As a &quot;${ADMIN}&quot; I want to open KitchenBuddy portal">
-<arg>${BASEURL}</arg>
+<arg>${WEBURL}</arg>
 <tag>openpage</tag>
 <doc>this keyword ensures user is able to open kitchenbuddy portal</doc>
 <kw name="New Browser" library="Browser">
-<arg>chromium</arg>
-<arg>headless=false</arg>
+<arg>${BROWSER}</arg>
+<arg>headless=true</arg>
 <arg>args=["--start-maximized"]</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<msg timestamp="20230919 22:45:59.767" level="INFO">{"browser": "chromium", "headless": false, "args": ["--start-maximized"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\TestQA\\Twilight\\automation\\foodstore\\results\\browser\\traces\\6307afca-ccac-46f2-a585-c0cf74bc97ea"}</msg>
-<msg timestamp="20230919 22:46:01.739" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"args":["--start-maximized"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\TestQA\\Twilight\\automation\\foodstore\\results\\browser\\traces\\6307afca-ccac-46f2-a585-c0cf74bc97ea"}</msg>
-<status status="PASS" starttime="20230919 22:45:59.767" endtime="20230919 22:46:01.739"/>
+<msg timestamp="20231009 22:19:21.800" level="INFO">{"browser": "chromium", "headless": true, "args": ["--start-maximized"], "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\TestQA\\Twilight\\rf-2023\\kitchenbuddy-vn\\results\\browser\\traces\\5d1387a7-cf4e-4104-9e19-23bd9c22d31e"}</msg>
+<msg timestamp="20231009 22:19:23.395" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"args":["--start-maximized"],"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\TestQA\\Twilight\\rf-2023\\kitchenbuddy-vn\\results\\browser\\traces\\5d1387a7-cf4e-4104-9e19-23bd9c22d31e"}</msg>
+<status status="PASS" starttime="20231009 22:19:21.799" endtime="20231009 22:19:23.395"/>
 </kw>
 <kw name="New Context" library="Browser">
 <arg>viewport=${None}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new BrowserContext with specified options.</doc>
-<msg timestamp="20230919 22:46:01.739" level="INFO">{
+<msg timestamp="20231009 22:19:23.396" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": false,
   "forcedColors": "none",
@@ -34,45 +34,42 @@
   "serviceWorkers": "allow",
   "viewport": null
 }</msg>
-<msg timestamp="20230919 22:46:01.759" level="INFO">Successfully created context. </msg>
-<msg timestamp="20230919 22:46:01.759" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': None}</msg>
-<status status="PASS" starttime="20230919 22:46:01.739" endtime="20230919 22:46:01.759"/>
+<msg timestamp="20231009 22:19:23.414" level="INFO">Successfully created context. </msg>
+<msg timestamp="20231009 22:19:23.414" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': None}</msg>
+<status status="PASS" starttime="20231009 22:19:23.395" endtime="20231009 22:19:23.414"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20230919 22:46:03.179" level="INFO">Successfully initialized new page object and opened url: https://www.kitchenbuddy.nl/foodticket/cgi/admin.cgi?application=KA&amp;language=en</msg>
-<status status="PASS" starttime="20230919 22:46:01.759" endtime="20230919 22:46:03.179"/>
+<msg timestamp="20231009 22:19:24.310" level="INFO">Successfully initialized new page object and opened url: https://www.waiterbuddy.nl/foodticket/cgi/admin.cgi?application=WA&amp;language=en</msg>
+<status status="PASS" starttime="20231009 22:19:23.414" endtime="20231009 22:19:24.311"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230919 22:46:04.179" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230919 22:46:03.179" endtime="20230919 22:46:04.179"/>
+<msg timestamp="20231009 22:19:25.312" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231009 22:19:24.311" endtime="20231009 22:19:25.312"/>
 </kw>
-<kw name="Take Screenshot" library="Browser">
-<tag>PageContent</tag>
-<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<msg timestamp="20230919 22:46:04.738" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20230919 22:46:04.179" endtime="20230919 22:46:04.738"/>
-</kw>
-<status status="PASS" starttime="20230919 22:45:59.767" endtime="20230919 22:46:04.738"/>
+<status status="PASS" starttime="20231009 22:19:21.799" endtime="20231009 22:19:25.312"/>
 </kw>
 <kw name="Submit user details" library="KitchenBuddy">
 <arg>${GEBRUIKERSNAAM}</arg>
 <arg>${WACHTWOORD}</arg>
 <tag>login</tag>
 <doc>this keyword ensures that authorized user is able to login to the portal.</doc>
+<kw name="Fill data" library="KitchenBuddy">
+<arg>${username}</arg>
+<arg>${password}</arg>
 <kw name="Fill Text" library="Browser">
 <arg>[name="login"]</arg>
 <arg>${username}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:04.746" level="INFO">Fills the text 'amirdhamutrecht' in the given field.</msg>
-<status status="PASS" starttime="20230919 22:46:04.738" endtime="20230919 22:46:04.796"/>
+<msg timestamp="20231009 22:19:25.316" level="INFO">Fills the text 'amirdhamutrecht' in the given field.</msg>
+<status status="PASS" starttime="20231009 22:19:25.316" endtime="20231009 22:19:25.372"/>
 </kw>
 <kw name="Fill Text" library="Browser">
 <arg>[name="password"]</arg>
@@ -80,21 +77,23 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:04.796" level="INFO">Fills the text 'wijzigen' in the given field.</msg>
-<status status="PASS" starttime="20230919 22:46:04.796" endtime="20230919 22:46:04.826"/>
+<msg timestamp="20231009 22:19:25.373" level="INFO">Fills the text 'wijzigen' in the given field.</msg>
+<status status="PASS" starttime="20231009 22:19:25.372" endtime="20231009 22:19:25.392"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>id=login-button</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230919 22:46:04.826" endtime="20230919 22:46:08.856"/>
+<status status="PASS" starttime="20231009 22:19:25.392" endtime="20231009 22:19:27.224"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230919 22:46:09.857" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20230919 22:46:08.856" endtime="20230919 22:46:09.857"/>
+<msg timestamp="20231009 22:19:28.225" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231009 22:19:27.224" endtime="20231009 22:19:28.225"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:25.315" endtime="20231009 22:19:28.225"/>
 </kw>
 <kw name="Get Title" library="Browser">
 <arg>==</arg>
@@ -103,35 +102,48 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the title of the current page.</doc>
-<msg timestamp="20230919 22:46:09.867" level="INFO">Title: 'OrderBuddy - Vegnation'</msg>
-<status status="PASS" starttime="20230919 22:46:09.857" endtime="20230919 22:46:09.867"/>
+<msg timestamp="20231009 22:19:28.225" level="INFO">Title: 'OrderBuddy - Vegnation'</msg>
+<status status="PASS" starttime="20231009 22:19:28.225" endtime="20231009 22:19:28.225"/>
 </kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20231009 22:19:28.342" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231009 22:19:28.225" endtime="20231009 22:19:28.342"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:25.314" endtime="20231009 22:19:28.342"/>
+</kw>
+<kw name="Navigate to Table menu item" library="KitchenBuddy">
+<tag>tables</tag>
 <kw name="Wait For Elements State" library="Browser">
-<arg>span:has-text("Logged in as Vegnation")</arg>
+<arg>button.tables</arg>
 <arg>visible</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230919 22:46:09.926" level="INFO">Waited for Element with selector span:has-text("Logged in as Vegnation") at state visible</msg>
-<status status="PASS" starttime="20230919 22:46:09.867" endtime="20230919 22:46:09.926"/>
+<msg timestamp="20231009 22:19:28.358" level="INFO">Waited for Element with selector button.tables at state visible</msg>
+<status status="PASS" starttime="20231009 22:19:28.343" endtime="20231009 22:19:28.358"/>
 </kw>
-<status status="PASS" starttime="20230919 22:46:04.738" endtime="20230919 22:46:09.926"/>
+<kw name="Click" library="Browser">
+<arg>button.tables</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20231009 22:19:28.358" endtime="20231009 22:19:28.399"/>
 </kw>
-<kw name="As a &quot;Admin&quot; I want to fetch customer orders" library="KitchenBuddy" sourcename="As a &quot;${ADMIN}&quot; I want to fetch customer orders">
-<tag>read_orders</tag>
-<doc>check customers orders exists then only start fetch</doc>
-<kw name="Create File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<doc>Creates a file with the given content and encoding.</doc>
-<msg timestamp="20230919 22:46:09.926" level="INFO" html="true">Created file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:09.926" endtime="20230919 22:46:09.926"/>
+<kw name="Wait For Elements State" library="Browser">
+<arg>div[table-id]:nth-child(2)</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20231009 22:19:28.619" level="INFO">Waited for Element with selector div[table-id]:nth-child(2) at state visible</msg>
+<status status="PASS" starttime="20231009 22:19:28.399" endtime="20231009 22:19:28.619"/>
 </kw>
-<kw name="File Should Be Empty" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<doc>Fails unless the specified file is empty.</doc>
-<msg timestamp="20230919 22:46:09.926" level="INFO" html="true">File '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;' is empty.</msg>
-<status status="PASS" starttime="20230919 22:46:09.926" endtime="20230919 22:46:09.926"/>
+<status status="PASS" starttime="20231009 22:19:28.343" endtime="20231009 22:19:28.619"/>
 </kw>
+<kw name="Fetch each table order details" library="KitchenBuddy">
+<tag>read_tbale_item</tag>
 <kw name="Check customers orders exists" library="KitchenBuddy">
 <var>${info}</var>
 <tag>check_orders_exists</tag>
@@ -146,17 +158,17 @@
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
-<msg timestamp="20230919 22:46:20.113" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230919 22:46:20.113" level="INFO">See also file:///C:/TestQA/Twilight/automation/foodstore/results/playwright-log.txt for additional details.</msg>
-<msg timestamp="20230919 22:46:20.113" level="FAIL">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+<msg timestamp="20231009 22:19:38.710" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231009 22:19:38.710" level="INFO">See also file:///C:/TestQA/Twilight/rf-2023/kitchenbuddy-vn/results/playwright-log.txt for additional details.</msg>
+<msg timestamp="20231009 22:19:38.710" level="FAIL">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
 =========================== logs ===========================
 waiting for locator('div#kitchen-orders:has-text("There are no orders yet.")')
 ============================================================
 Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
-<status status="FAIL" starttime="20230919 22:46:09.926" endtime="20230919 22:46:20.113"/>
+<status status="FAIL" starttime="20231009 22:19:28.621" endtime="20231009 22:19:38.714"/>
 </kw>
-<msg timestamp="20230919 22:46:20.113" level="INFO">${element_status} = False</msg>
-<status status="PASS" starttime="20230919 22:46:09.926" endtime="20230919 22:46:20.113"/>
+<msg timestamp="20231009 22:19:38.714" level="INFO">${element_status} = False</msg>
+<status status="PASS" starttime="20231009 22:19:28.621" endtime="20231009 22:19:38.714"/>
 </kw>
 <if>
 <branch type="IF" condition="${element_status} == ${true}">
@@ -167,1455 +179,1289 @@ Tip: Use "Set Browser Timeout" for increasing the timeout or double check your l
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:20.113" endtime="20230919 22:46:20.113"/>
+<status status="NOT RUN" starttime="20231009 22:19:38.714" endtime="20231009 22:19:38.714"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${orders_load}</arg>
 <arg>${NO_ORDERS_EN}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:20.113" endtime="20230919 22:46:20.113"/>
+<status status="NOT RUN" starttime="20231009 22:19:38.714" endtime="20231009 22:19:38.714"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${NO_ORDERS_EN}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:20.113" endtime="20230919 22:46:20.113"/>
+<status status="NOT RUN" starttime="20231009 22:19:38.714" endtime="20231009 22:19:38.715"/>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <arg>${MSG}</arg>
 <arg>${NO_ORDERS_EN}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:20.113" endtime="20230919 22:46:20.113"/>
+<status status="NOT RUN" starttime="20231009 22:19:38.715" endtime="20231009 22:19:38.715"/>
 </kw>
-<status status="NOT RUN" starttime="20230919 22:46:20.113" endtime="20230919 22:46:20.113"/>
+<status status="NOT RUN" starttime="20231009 22:19:38.714" endtime="20231009 22:19:38.715"/>
 </branch>
-<branch type="ELSE">
+<status status="PASS" starttime="20231009 22:19:38.714" endtime="20231009 22:19:38.715"/>
+</if>
+<return>
+<value>${MSG}</value>
+<status status="PASS" starttime="20231009 22:19:38.715" endtime="20231009 22:19:38.715"/>
+</return>
+<msg timestamp="20231009 22:19:38.715" level="INFO">${info} = </msg>
+<status status="PASS" starttime="20231009 22:19:28.620" endtime="20231009 22:19:38.715"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Before fetch, check orders are placed!, ${info}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:38.715" level="INFO">Before fetch, check orders are placed!, </msg>
+<status status="PASS" starttime="20231009 22:19:38.715" endtime="20231009 22:19:38.715"/>
+</kw>
+<kw name="Get Elements" library="Browser">
+<var>@{table_ids}</var>
+<arg>//div[@class="popup-content"]/div[@table-id][@order-id]</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<msg timestamp="20231009 22:19:38.730" level="INFO">Found Locator@//div[@class="popup-content"]/div[@table-id][@order-id] &gt;&gt; nth=0,Locator@//div[@class="popup-content"]/div[@table-id][@order-id] &gt;&gt; nth=1 Locators successfully.</msg>
+<msg timestamp="20231009 22:19:38.731" level="INFO">@{table_ids} = [ //div[@class="popup-content"]/div[@table-id][@order-id] &gt;&gt; nth=0 | //div[@class="popup-content"]/div[@table-id][@order-id] &gt;&gt; nth=1 ]</msg>
+<status status="PASS" starttime="20231009 22:19:38.715" endtime="20231009 22:19:38.731"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${table_id}</var>
+<arg>${table_ids}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20231009 22:19:38.731" level="INFO">Length is 2</msg>
+<msg timestamp="20231009 22:19:38.731" level="INFO">${table_id} = 2</msg>
+<status status="PASS" starttime="20231009 22:19:38.731" endtime="20231009 22:19:38.731"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${tIndex}</var>
+<arg>1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231009 22:19:38.731" level="INFO">${tIndex} = 1</msg>
+<status status="PASS" starttime="20231009 22:19:38.731" endtime="20231009 22:19:38.731"/>
+</kw>
+<for flavor="IN">
+<var>${t_orderId}</var>
+<value>@{table_ids}</value>
+<iter>
+<var name="${t_orderId}">//div[@class="popup-content"]/div[@table-id][@order-id] &gt;&gt; nth=0</var>
 <kw name="Wait For Elements State" library="Browser">
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)</arg>
+<arg>(//div[@table-id][@order-id])[${tIndex}]</arg>
 <arg>visible</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<msg timestamp="20230919 22:46:20.127" level="INFO">Waited for Element with selector div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1) at state visible</msg>
-<status status="PASS" starttime="20230919 22:46:20.121" endtime="20230919 22:46:20.127"/>
+<msg timestamp="20231009 22:19:38.738" level="INFO">Waited for Element with selector (//div[@table-id][@order-id])[1] at state visible</msg>
+<status status="PASS" starttime="20231009 22:19:38.731" endtime="20231009 22:19:38.738"/>
 </kw>
-<kw name="Set Test Variable" library="BuiltIn">
-<arg>${MSG}</arg>
-<arg>*** There are active orders present! Please wait while fetching orders!! ***</arg>
-<doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<msg timestamp="20230919 22:46:20.127" level="INFO">${MSG} = *** There are active orders present! Please wait while fetching orders!! ***</msg>
-<status status="PASS" starttime="20230919 22:46:20.127" endtime="20230919 22:46:20.127"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:20.113" endtime="20230919 22:46:20.127"/>
-</branch>
-<status status="PASS" starttime="20230919 22:46:20.113" endtime="20230919 22:46:20.127"/>
-</if>
-<return>
-<value>${MSG}</value>
-<status status="PASS" starttime="20230919 22:46:20.127" endtime="20230919 22:46:20.127"/>
-</return>
-<msg timestamp="20230919 22:46:20.127" level="INFO">${info} = *** There are active orders present! Please wait while fetching orders!! ***</msg>
-<status status="PASS" starttime="20230919 22:46:09.926" endtime="20230919 22:46:20.127"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${info}&quot; == &quot;${NO_ORDERS_EN}&quot;">
-<kw name="Create List" library="BuiltIn">
-<var>@{retrieve_ordersdata}</var>
-<arg>${info} &amp; We are waiting for orders with patience!${\n}</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:20.127" endtime="20230919 22:46:20.127"/>
-</kw>
-<status status="NOT RUN" starttime="20230919 22:46:20.127" endtime="20230919 22:46:20.127"/>
-</branch>
-<branch type="ELSE">
-<kw name="Get Elements" library="Browser">
-<var>@{tables}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
-for all matched elements by ``selector``.</doc>
-<msg timestamp="20230919 22:46:20.148" level="INFO">Found Locator@div.content&gt;div#kitchen-orders&gt;div[data-id] &gt;&gt; nth=0,Locator@div.content&gt;div#kitchen-orders&gt;div[data-id] &gt;&gt; nth=1,Locator@div.content&gt;div#kitchen-orders&gt;div[data-id] &gt;&gt; nth=2,Locator@div.content&gt;div#kitchen-orders&gt;div[data-id] &gt;&gt; nth=3 Locators successfully.</msg>
-<msg timestamp="20230919 22:46:20.148" level="INFO">@{tables} = [ div.content&gt;div#kitchen-orders&gt;div[data-id] &gt;&gt; nth=0 | div.content&gt;div#kitchen-orders&gt;div[data-id] &gt;&gt; nth=1 | div.content&gt;div#kitchen-orders&gt;div[data-id] &gt;&gt; nth=2 | div.content&gt;div#kitchen-orders&gt;di...</msg>
-<status status="PASS" starttime="20230919 22:46:20.127" endtime="20230919 22:46:20.148"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${table_count}</var>
-<arg>${tables}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230919 22:46:20.148" level="INFO">Length is 4</msg>
-<msg timestamp="20230919 22:46:20.148" level="INFO">${table_count} = 4</msg>
-<status status="PASS" starttime="20230919 22:46:20.148" endtime="20230919 22:46:20.148"/>
-</kw>
-<kw name="Create List" library="BuiltIn">
-<var>@{retrieve_ordersdata}</var>
-<arg>No.of active customer orders:'${table_count}'${\n}</arg>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20230919 22:46:20.149" level="INFO">@{retrieve_ordersdata} = [ No.of active customer orders:'4'
- ]</msg>
-<status status="PASS" starttime="20230919 22:46:20.148" endtime="20230919 22:46:20.149"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${dataId_index}</var>
-<arg>1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:20.149" level="INFO">${dataId_index} = 1</msg>
-<status status="PASS" starttime="20230919 22:46:20.149" endtime="20230919 22:46:20.149"/>
-</kw>
-<for flavor="IN">
-<var>${tafel}</var>
-<value>@{tables}</value>
-<iter>
-<var name="${tafel}">div.content&gt;div#kitchen-orders&gt;div[data-id] &gt;&gt; nth=0</var>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${tafel_orderId}</var>
-<arg>Get Element</arg>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-time</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Get Element" library="Browser">
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-time</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
-<msg timestamp="20230919 22:46:20.153" level="INFO">Locator found successfully.</msg>
-<status status="PASS" starttime="20230919 22:46:20.149" endtime="20230919 22:46:20.153"/>
-</kw>
-<msg timestamp="20230919 22:46:20.153" level="INFO">${tafel_orderId} = True</msg>
-<status status="PASS" starttime="20230919 22:46:20.149" endtime="20230919 22:46:20.153"/>
-</kw>
-<if>
-<branch type="IF" condition="${tafel_orderId} == ${true}">
 <kw name="Get Text" library="Browser">
-<var>${table_name}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-time</arg>
+<var>${order_table}</var>
+<arg>(//div[@table-id][@order-id])[${tIndex}]</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:20.185" level="INFO">Text: 'Restaurant (26)'</msg>
-<msg timestamp="20230919 22:46:20.185" level="INFO">${table_name} = Restaurant (26)</msg>
-<status status="PASS" starttime="20230919 22:46:20.153" endtime="20230919 22:46:20.185"/>
+<msg timestamp="20231009 22:19:38.760" level="INFO">Text: '28\n28,50'</msg>
+<msg timestamp="20231009 22:19:38.760" level="INFO">${order_table} = 28
+28,50</msg>
+<status status="PASS" starttime="20231009 22:19:38.738" endtime="20231009 22:19:38.760"/>
 </kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>Table:${SPACE*5}${table_name}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:20.185" endtime="20230919 22:46:20.185"/>
+<kw name="Replace String" library="String">
+<var>${order_table}</var>
+<arg>${order_table}</arg>
+<arg>\n</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20231009 22:19:38.760" level="INFO">${order_table} = 28_28,50</msg>
+<status status="PASS" starttime="20231009 22:19:38.760" endtime="20231009 22:19:38.760"/>
 </kw>
-<kw name="Get Text" library="Browser">
-<var>${table_orderId}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchenrow-id</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:20.202" level="INFO">Text: '2645 (#115993695)'</msg>
-<msg timestamp="20230919 22:46:20.202" level="INFO">${table_orderId} = 2645 (#115993695)</msg>
-<status status="PASS" starttime="20230919 22:46:20.185" endtime="20230919 22:46:20.202"/>
+<kw name="Split String From Right" library="String">
+<var>${tb}</var>
+<var>${price}</var>
+<arg>${order_table}</arg>
+<arg>_</arg>
+<doc>Splits the ``string`` using ``separator`` starting from right.</doc>
+<msg timestamp="20231009 22:19:38.760" level="INFO">${tb} = 28</msg>
+<msg timestamp="20231009 22:19:38.760" level="INFO">${price} = 28,50</msg>
+<status status="PASS" starttime="20231009 22:19:38.760" endtime="20231009 22:19:38.760"/>
 </kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${SPACE*3}${table_orderId}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:20.202" endtime="20230919 22:46:20.202"/>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${tb}</var>
+<arg>${tb}</arg>
+<arg>${None}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231009 22:19:38.762" level="INFO">${tb} = 28</msg>
+<status status="PASS" starttime="20231009 22:19:38.760" endtime="20231009 22:19:38.762"/>
 </kw>
-<kw name="Get Elements" library="Browser">
-<var>@{fetch_orderlist}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
-for all matched elements by ``selector``.</doc>
-<msg timestamp="20230919 22:46:20.202" level="INFO">Found Locator@div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=0 Locators successfully.</msg>
-<msg timestamp="20230919 22:46:20.202" level="INFO">@{fetch_orderlist} = [ div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=0 ]</msg>
-<status status="PASS" starttime="20230919 22:46:20.202" endtime="20230919 22:46:20.202"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${menu_count}</var>
-<arg>${fetch_orderlist}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230919 22:46:20.202" level="INFO">Length is 1</msg>
-<msg timestamp="20230919 22:46:20.202" level="INFO">${menu_count} = 1</msg>
-<status status="PASS" starttime="20230919 22:46:20.202" endtime="20230919 22:46:20.202"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${tr_index}</var>
-<arg>1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:20.202" level="INFO">${tr_index} = 1</msg>
-<status status="PASS" starttime="20230919 22:46:20.202" endtime="20230919 22:46:20.202"/>
-</kw>
-<for flavor="IN">
-<var>${element}</var>
-<value>@{fetch_orderlist}</value>
-<iter>
-<var name="${element}">div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=0</var>
-<kw name="Get Text" library="Browser">
-<var>${order_quantity}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(1)</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:20.235" level="INFO">Text: '1x'</msg>
-<msg timestamp="20230919 22:46:20.235" level="INFO">${order_quantity} = 1x</msg>
-<status status="PASS" starttime="20230919 22:46:20.202" endtime="20230919 22:46:20.235"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${order_category}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(2)&gt;b</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:20.251" level="INFO">Text: '[Vegan Idli] vegan ghee podi idli'</msg>
-<msg timestamp="20230919 22:46:20.251" level="INFO">${order_category} = [Vegan Idli] vegan ghee podi idli</msg>
-<status status="PASS" starttime="20230919 22:46:20.235" endtime="20230919 22:46:20.251"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${SPACE*6} ${order_quantity}${SPACE*2}${order_category}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:20.251" endtime="20230919 22:46:20.251"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${tr_index}</var>
-<arg>${tr_index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:20.251" level="INFO">${tr_index} = 2</msg>
-<status status="PASS" starttime="20230919 22:46:20.251" endtime="20230919 22:46:20.251"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:20.202" endtime="20230919 22:46:20.251"/>
-</iter>
-<status status="PASS" starttime="20230919 22:46:20.202" endtime="20230919 22:46:20.251"/>
-</for>
 <kw name="Click" library="Browser">
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;button:has-text("Ready")</arg>
+<arg>${t_orderId}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230919 22:46:20.251" endtime="20230919 22:46:20.318"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>**************************************${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:20.319" endtime="20230919 22:46:20.319"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:20.153" endtime="20230919 22:46:20.319"/>
-</branch>
-<branch type="ELSE IF" condition="${tafel_orderId} == ${false}">
-<kw name="Click" library="Browser">
-<arg>button#reload-kitchenbuddy</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:20.319" endtime="20230919 22:46:20.319"/>
+<status status="PASS" starttime="20231009 22:19:38.762" endtime="20231009 22:19:38.813"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:20.319" endtime="20230919 22:46:20.319"/>
+<msg timestamp="20231009 22:19:39.814" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231009 22:19:38.813" endtime="20231009 22:19:39.814"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>div#pos-ticket&gt;h2[data-org]</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20231009 22:19:39.814" level="INFO">Waited for Element with selector div#pos-ticket&gt;h2[data-org] at state visible</msg>
+<status status="PASS" starttime="20231009 22:19:39.814" endtime="20231009 22:19:39.814"/>
 </kw>
 <kw name="Get Text" library="Browser">
-<var>${reload_oreder}</var>
-<arg>div#kitchen-orders:has-text("There are no orders yet.")</arg>
+<var>${orderId}</var>
+<arg>div#pos-ticket&gt;h2[data-org] &gt;span</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:20.319" endtime="20230919 22:46:20.319"/>
+<msg timestamp="20231009 22:19:39.843" level="INFO">Text: '#117713944'</msg>
+<msg timestamp="20231009 22:19:39.843" level="INFO">${orderId} = #117713944</msg>
+<status status="PASS" starttime="20231009 22:19:39.814" endtime="20231009 22:19:39.843"/>
 </kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${reload_oreder}</arg>
-<arg>${NO_ORDERS_EN}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:20.319" endtime="20230919 22:46:20.319"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>Hey!! All orders are ready and we are happy to serve and hence '${reload_oreder}'${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:20.319" endtime="20230919 22:46:20.319"/>
-</kw>
-<status status="NOT RUN" starttime="20230919 22:46:20.319" endtime="20230919 22:46:20.319"/>
-</branch>
-<status status="PASS" starttime="20230919 22:46:20.153" endtime="20230919 22:46:20.319"/>
-</if>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230919 22:46:22.319" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230919 22:46:20.319" endtime="20230919 22:46:22.319"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:20.149" endtime="20230919 22:46:22.319"/>
-</iter>
-<iter>
-<var name="${tafel}">div.content&gt;div#kitchen-orders&gt;div[data-id] &gt;&gt; nth=1</var>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${tafel_orderId}</var>
-<arg>Get Element</arg>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-time</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Get Element" library="Browser">
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-time</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
-<msg timestamp="20230919 22:46:22.333" level="INFO">Locator found successfully.</msg>
-<status status="PASS" starttime="20230919 22:46:22.319" endtime="20230919 22:46:22.333"/>
-</kw>
-<msg timestamp="20230919 22:46:22.333" level="INFO">${tafel_orderId} = True</msg>
-<status status="PASS" starttime="20230919 22:46:22.319" endtime="20230919 22:46:22.333"/>
-</kw>
-<if>
-<branch type="IF" condition="${tafel_orderId} == ${true}">
 <kw name="Get Text" library="Browser">
-<var>${table_name}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-time</arg>
+<var>${tableNum}</var>
+<arg>//div[@id="pos-ticket"]/h2[text()][@data-org="Order"]</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:22.346" level="INFO">Text: 'Restaurant (3)'</msg>
-<msg timestamp="20230919 22:46:22.346" level="INFO">${table_name} = Restaurant (3)</msg>
-<status status="PASS" starttime="20230919 22:46:22.333" endtime="20230919 22:46:22.346"/>
+<msg timestamp="20231009 22:19:39.860" level="INFO">Text: '28 #117713944'</msg>
+<msg timestamp="20231009 22:19:39.860" level="INFO">${tableNum} = 28 #117713944</msg>
+<status status="PASS" starttime="20231009 22:19:39.843" endtime="20231009 22:19:39.860"/>
 </kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>Table:${SPACE*5}${table_name}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:22.346" endtime="20230919 22:46:22.346"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${table_orderId}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchenrow-id</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:22.387" level="INFO">Text: '2646 (#115993701)'</msg>
-<msg timestamp="20230919 22:46:22.387" level="INFO">${table_orderId} = 2646 (#115993701)</msg>
-<status status="PASS" starttime="20230919 22:46:22.346" endtime="20230919 22:46:22.387"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${SPACE*3}${table_orderId}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:22.387" endtime="20230919 22:46:22.387"/>
+<kw name="Replace String" library="String">
+<var>${orderId}</var>
+<arg>${orderId}</arg>
+<arg>\#</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20231009 22:19:39.860" level="INFO">${orderId} = 117713944</msg>
+<status status="PASS" starttime="20231009 22:19:39.860" endtime="20231009 22:19:39.860"/>
 </kw>
 <kw name="Get Elements" library="Browser">
-<var>@{fetch_orderlist}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr</arg>
+<var>@{menuItems}</var>
+<arg>//tbody/tr[@data-i]</arg>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
 for all matched elements by ``selector``.</doc>
-<msg timestamp="20230919 22:46:22.395" level="INFO">Found Locator@div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=0,Locator@div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=1 Locators successfully.</msg>
-<msg timestamp="20230919 22:46:22.395" level="INFO">@{fetch_orderlist} = [ div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=0 | div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;...</msg>
-<status status="PASS" starttime="20230919 22:46:22.387" endtime="20230919 22:46:22.395"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${menu_count}</var>
-<arg>${fetch_orderlist}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230919 22:46:22.395" level="INFO">Length is 2</msg>
-<msg timestamp="20230919 22:46:22.395" level="INFO">${menu_count} = 2</msg>
-<status status="PASS" starttime="20230919 22:46:22.395" endtime="20230919 22:46:22.395"/>
+<msg timestamp="20231009 22:19:39.864" level="INFO">Found Locator@//tbody/tr[@data-i] &gt;&gt; nth=0,Locator@//tbody/tr[@data-i] &gt;&gt; nth=1,Locator@//tbody/tr[@data-i] &gt;&gt; nth=2 Locators successfully.</msg>
+<msg timestamp="20231009 22:19:39.864" level="INFO">@{menuItems} = [ //tbody/tr[@data-i] &gt;&gt; nth=0 | //tbody/tr[@data-i] &gt;&gt; nth=1 | //tbody/tr[@data-i] &gt;&gt; nth=2 ]</msg>
+<status status="PASS" starttime="20231009 22:19:39.860" endtime="20231009 22:19:39.864"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
-<var>${tr_index}</var>
-<arg>1</arg>
+<var>${iData}</var>
+<arg>0</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:22.395" level="INFO">${tr_index} = 1</msg>
-<status status="PASS" starttime="20230919 22:46:22.395" endtime="20230919 22:46:22.395"/>
+<msg timestamp="20231009 22:19:39.864" level="INFO">${iData} = 0</msg>
+<status status="PASS" starttime="20231009 22:19:39.864" endtime="20231009 22:19:39.864"/>
 </kw>
 <for flavor="IN">
-<var>${element}</var>
-<value>@{fetch_orderlist}</value>
+<var>${menuItem}</var>
+<value>@{menuItems}</value>
 <iter>
-<var name="${element}">div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=0</var>
+<var name="${menuItem}">//tbody/tr[@data-i] &gt;&gt; nth=0</var>
+<kw name="Get Attribute" library="Browser">
+<var>${item_quantity}</var>
+<arg>//tbody/tr[@data-i="${iData}"]/td[1]/input</arg>
+<arg>value</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<msg timestamp="20231009 22:19:39.880" level="INFO">Attribute is: '1'</msg>
+<msg timestamp="20231009 22:19:39.880" level="INFO">${item_quantity} = 1</msg>
+<status status="PASS" starttime="20231009 22:19:39.864" endtime="20231009 22:19:39.880"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${item_quantity}</var>
+<arg>${item_quantity}</arg>
+<arg>${None}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231009 22:19:39.880" level="INFO">${item_quantity} = 1</msg>
+<status status="PASS" starttime="20231009 22:19:39.880" endtime="20231009 22:19:39.880"/>
+</kw>
 <kw name="Get Text" library="Browser">
-<var>${order_quantity}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(1)</arg>
+<var>${item_name}</var>
+<arg>//tr[@data-i="${iData}"]/td[@class="desc"]</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:22.411" level="INFO">Text: '1x'</msg>
-<msg timestamp="20230919 22:46:22.411" level="INFO">${order_quantity} = 1x</msg>
-<status status="PASS" starttime="20230919 22:46:22.395" endtime="20230919 22:46:22.411"/>
+<msg timestamp="20231009 22:19:39.897" level="INFO">Text: 'Chole Bhature\n'</msg>
+<msg timestamp="20231009 22:19:39.897" level="INFO">${item_name} = Chole Bhature
+</msg>
+<status status="PASS" starttime="20231009 22:19:39.880" endtime="20231009 22:19:39.897"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${item_name}</var>
+<arg>${item_name}</arg>
+<arg>\n</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20231009 22:19:39.897" level="INFO">${item_name} = Chole Bhature</msg>
+<status status="PASS" starttime="20231009 22:19:39.897" endtime="20231009 22:19:39.897"/>
 </kw>
 <kw name="Get Text" library="Browser">
-<var>${order_category}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(2)&gt;b</arg>
+<var>${item_price}</var>
+<arg>//tr[@data-i="${iData}"]/td[@class="price"]</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:22.444" level="INFO">Text: '[Vegan Chaat] Vegan Chat Platter'</msg>
-<msg timestamp="20230919 22:46:22.444" level="INFO">${order_category} = [Vegan Chaat] Vegan Chat Platter</msg>
-<status status="PASS" starttime="20230919 22:46:22.411" endtime="20230919 22:46:22.444"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${SPACE*6} ${order_quantity}${SPACE*2}${order_category}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:22.444" endtime="20230919 22:46:22.444"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${tr_index}</var>
-<arg>${tr_index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:22.444" level="INFO">${tr_index} = 2</msg>
-<status status="PASS" starttime="20230919 22:46:22.444" endtime="20230919 22:46:22.444"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:22.395" endtime="20230919 22:46:22.444"/>
-</iter>
-<iter>
-<var name="${element}">div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=1</var>
-<kw name="Get Text" library="Browser">
-<var>${order_quantity}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(1)</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:22.460" level="INFO">Text: '1x'</msg>
-<msg timestamp="20230919 22:46:22.460" level="INFO">${order_quantity} = 1x</msg>
-<status status="PASS" starttime="20230919 22:46:22.444" endtime="20230919 22:46:22.460"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${order_category}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(2)&gt;b</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:22.476" level="INFO">Text: '[Vegan Chaat] vegan vada pav'</msg>
-<msg timestamp="20230919 22:46:22.476" level="INFO">${order_category} = [Vegan Chaat] vegan vada pav</msg>
-<status status="PASS" starttime="20230919 22:46:22.460" endtime="20230919 22:46:22.476"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${SPACE*6} ${order_quantity}${SPACE*2}${order_category}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:22.476" endtime="20230919 22:46:22.476"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${tr_index}</var>
-<arg>${tr_index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:22.476" level="INFO">${tr_index} = 3</msg>
-<status status="PASS" starttime="20230919 22:46:22.476" endtime="20230919 22:46:22.476"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:22.444" endtime="20230919 22:46:22.476"/>
-</iter>
-<status status="PASS" starttime="20230919 22:46:22.395" endtime="20230919 22:46:22.476"/>
-</for>
-<kw name="Click" library="Browser">
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;button:has-text("Ready")</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230919 22:46:22.476" endtime="20230919 22:46:22.526"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>**************************************${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:22.526" endtime="20230919 22:46:22.526"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:22.333" endtime="20230919 22:46:22.526"/>
-</branch>
-<branch type="ELSE IF" condition="${tafel_orderId} == ${false}">
-<kw name="Click" library="Browser">
-<arg>button#reload-kitchenbuddy</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:22.526" endtime="20230919 22:46:22.526"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:22.526" endtime="20230919 22:46:22.526"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${reload_oreder}</var>
-<arg>div#kitchen-orders:has-text("There are no orders yet.")</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:22.526" endtime="20230919 22:46:22.526"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${reload_oreder}</arg>
-<arg>${NO_ORDERS_EN}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:22.526" endtime="20230919 22:46:22.526"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>Hey!! All orders are ready and we are happy to serve and hence '${reload_oreder}'${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:22.526" endtime="20230919 22:46:22.534"/>
-</kw>
-<status status="NOT RUN" starttime="20230919 22:46:22.526" endtime="20230919 22:46:22.534"/>
-</branch>
-<status status="PASS" starttime="20230919 22:46:22.333" endtime="20230919 22:46:22.534"/>
-</if>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230919 22:46:24.535" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230919 22:46:22.535" endtime="20230919 22:46:24.535"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:22.319" endtime="20230919 22:46:24.535"/>
-</iter>
-<iter>
-<var name="${tafel}">div.content&gt;div#kitchen-orders&gt;div[data-id] &gt;&gt; nth=2</var>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${tafel_orderId}</var>
-<arg>Get Element</arg>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-time</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Get Element" library="Browser">
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-time</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
-<msg timestamp="20230919 22:46:24.539" level="INFO">Locator found successfully.</msg>
-<status status="PASS" starttime="20230919 22:46:24.535" endtime="20230919 22:46:24.539"/>
-</kw>
-<msg timestamp="20230919 22:46:24.539" level="INFO">${tafel_orderId} = True</msg>
-<status status="PASS" starttime="20230919 22:46:24.535" endtime="20230919 22:46:24.539"/>
-</kw>
-<if>
-<branch type="IF" condition="${tafel_orderId} == ${true}">
-<kw name="Get Text" library="Browser">
-<var>${table_name}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-time</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:24.560" level="INFO">Text: 'Restaurant (32)'</msg>
-<msg timestamp="20230919 22:46:24.560" level="INFO">${table_name} = Restaurant (32)</msg>
-<status status="PASS" starttime="20230919 22:46:24.544" endtime="20230919 22:46:24.560"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>Table:${SPACE*5}${table_name}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:24.560" endtime="20230919 22:46:24.560"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${table_orderId}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchenrow-id</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:24.578" level="INFO">Text: '2647 (#115993707)'</msg>
-<msg timestamp="20230919 22:46:24.578" level="INFO">${table_orderId} = 2647 (#115993707)</msg>
-<status status="PASS" starttime="20230919 22:46:24.560" endtime="20230919 22:46:24.578"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${SPACE*3}${table_orderId}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:24.578" endtime="20230919 22:46:24.578"/>
-</kw>
-<kw name="Get Elements" library="Browser">
-<var>@{fetch_orderlist}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
-for all matched elements by ``selector``.</doc>
-<msg timestamp="20230919 22:46:24.599" level="INFO">Found Locator@div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=0,Locator@div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=1,Locator@div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=2,Locator@div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=3 Locators successfully.</msg>
-<msg timestamp="20230919 22:46:24.599" level="INFO">@{fetch_orderlist} = [ div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=0 | div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;...</msg>
-<status status="PASS" starttime="20230919 22:46:24.578" endtime="20230919 22:46:24.599"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${menu_count}</var>
-<arg>${fetch_orderlist}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230919 22:46:24.599" level="INFO">Length is 4</msg>
-<msg timestamp="20230919 22:46:24.599" level="INFO">${menu_count} = 4</msg>
-<status status="PASS" starttime="20230919 22:46:24.599" endtime="20230919 22:46:24.599"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${tr_index}</var>
-<arg>1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:24.599" level="INFO">${tr_index} = 1</msg>
-<status status="PASS" starttime="20230919 22:46:24.599" endtime="20230919 22:46:24.599"/>
-</kw>
-<for flavor="IN">
-<var>${element}</var>
-<value>@{fetch_orderlist}</value>
-<iter>
-<var name="${element}">div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=0</var>
-<kw name="Get Text" library="Browser">
-<var>${order_quantity}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(1)</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:24.626" level="INFO">Text: '1x'</msg>
-<msg timestamp="20230919 22:46:24.626" level="INFO">${order_quantity} = 1x</msg>
-<status status="PASS" starttime="20230919 22:46:24.599" endtime="20230919 22:46:24.626"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${order_category}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(2)&gt;b</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:24.659" level="INFO">Text: '[Uthappam] Onion Uthappam'</msg>
-<msg timestamp="20230919 22:46:24.659" level="INFO">${order_category} = [Uthappam] Onion Uthappam</msg>
-<status status="PASS" starttime="20230919 22:46:24.626" endtime="20230919 22:46:24.659"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${SPACE*6} ${order_quantity}${SPACE*2}${order_category}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:24.659" endtime="20230919 22:46:24.659"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${tr_index}</var>
-<arg>${tr_index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:24.659" level="INFO">${tr_index} = 2</msg>
-<status status="PASS" starttime="20230919 22:46:24.659" endtime="20230919 22:46:24.659"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:24.599" endtime="20230919 22:46:24.659"/>
-</iter>
-<iter>
-<var name="${element}">div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=1</var>
-<kw name="Get Text" library="Browser">
-<var>${order_quantity}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(1)</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:24.690" level="INFO">Text: '1x'</msg>
-<msg timestamp="20230919 22:46:24.690" level="INFO">${order_quantity} = 1x</msg>
-<status status="PASS" starttime="20230919 22:46:24.659" endtime="20230919 22:46:24.690"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${order_category}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(2)&gt;b</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:24.708" level="INFO">Text: '[Uthappam] Onion Podi Uthappam'</msg>
-<msg timestamp="20230919 22:46:24.708" level="INFO">${order_category} = [Uthappam] Onion Podi Uthappam</msg>
-<status status="PASS" starttime="20230919 22:46:24.690" endtime="20230919 22:46:24.708"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${SPACE*6} ${order_quantity}${SPACE*2}${order_category}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:24.708" endtime="20230919 22:46:24.708"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${tr_index}</var>
-<arg>${tr_index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:24.708" level="INFO">${tr_index} = 3</msg>
-<status status="PASS" starttime="20230919 22:46:24.708" endtime="20230919 22:46:24.708"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:24.659" endtime="20230919 22:46:24.708"/>
-</iter>
-<iter>
-<var name="${element}">div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=2</var>
-<kw name="Get Text" library="Browser">
-<var>${order_quantity}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(1)</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:24.724" level="INFO">Text: '2x'</msg>
-<msg timestamp="20230919 22:46:24.724" level="INFO">${order_quantity} = 2x</msg>
-<status status="PASS" starttime="20230919 22:46:24.708" endtime="20230919 22:46:24.724"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${order_category}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(2)&gt;b</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:24.755" level="INFO">Text: '[Uthappam] Tomato Chilly Uthappam'</msg>
-<msg timestamp="20230919 22:46:24.755" level="INFO">${order_category} = [Uthappam] Tomato Chilly Uthappam</msg>
-<status status="PASS" starttime="20230919 22:46:24.724" endtime="20230919 22:46:24.755"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${SPACE*6} ${order_quantity}${SPACE*2}${order_category}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:24.755" endtime="20230919 22:46:24.755"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${tr_index}</var>
-<arg>${tr_index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:24.755" level="INFO">${tr_index} = 4</msg>
-<status status="PASS" starttime="20230919 22:46:24.755" endtime="20230919 22:46:24.755"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:24.708" endtime="20230919 22:46:24.755"/>
-</iter>
-<iter>
-<var name="${element}">div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=3</var>
-<kw name="Get Text" library="Browser">
-<var>${order_quantity}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(1)</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:24.788" level="INFO">Text: '1x'</msg>
-<msg timestamp="20230919 22:46:24.788" level="INFO">${order_quantity} = 1x</msg>
-<status status="PASS" starttime="20230919 22:46:24.755" endtime="20230919 22:46:24.788"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${order_category}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(2)&gt;b</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:24.803" level="INFO">Text: '[Uthappam] vegetable uthappam'</msg>
-<msg timestamp="20230919 22:46:24.803" level="INFO">${order_category} = [Uthappam] vegetable uthappam</msg>
-<status status="PASS" starttime="20230919 22:46:24.788" endtime="20230919 22:46:24.803"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${SPACE*6} ${order_quantity}${SPACE*2}${order_category}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:24.803" endtime="20230919 22:46:24.803"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${tr_index}</var>
-<arg>${tr_index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:24.803" level="INFO">${tr_index} = 5</msg>
-<status status="PASS" starttime="20230919 22:46:24.803" endtime="20230919 22:46:24.803"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:24.755" endtime="20230919 22:46:24.803"/>
-</iter>
-<status status="PASS" starttime="20230919 22:46:24.599" endtime="20230919 22:46:24.803"/>
-</for>
-<kw name="Click" library="Browser">
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;button:has-text("Ready")</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230919 22:46:24.803" endtime="20230919 22:46:24.854"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>**************************************${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:24.854" endtime="20230919 22:46:24.854"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:24.539" endtime="20230919 22:46:24.854"/>
-</branch>
-<branch type="ELSE IF" condition="${tafel_orderId} == ${false}">
-<kw name="Click" library="Browser">
-<arg>button#reload-kitchenbuddy</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:24.854" endtime="20230919 22:46:24.854"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:24.854" endtime="20230919 22:46:24.854"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${reload_oreder}</var>
-<arg>div#kitchen-orders:has-text("There are no orders yet.")</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:24.854" endtime="20230919 22:46:24.854"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${reload_oreder}</arg>
-<arg>${NO_ORDERS_EN}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:24.854" endtime="20230919 22:46:24.854"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>Hey!! All orders are ready and we are happy to serve and hence '${reload_oreder}'${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:24.854" endtime="20230919 22:46:24.854"/>
-</kw>
-<status status="NOT RUN" starttime="20230919 22:46:24.854" endtime="20230919 22:46:24.854"/>
-</branch>
-<status status="PASS" starttime="20230919 22:46:24.539" endtime="20230919 22:46:24.854"/>
-</if>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230919 22:46:26.854" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230919 22:46:24.854" endtime="20230919 22:46:26.854"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:24.535" endtime="20230919 22:46:26.855"/>
-</iter>
-<iter>
-<var name="${tafel}">div.content&gt;div#kitchen-orders&gt;div[data-id] &gt;&gt; nth=3</var>
-<kw name="Run Keyword And Return Status" library="BuiltIn">
-<var>${tafel_orderId}</var>
-<arg>Get Element</arg>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-time</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<kw name="Get Element" library="Browser">
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-time</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to a Playwright [https://playwright.dev/docs/api/class-locator|Locator].</doc>
-<msg timestamp="20230919 22:46:26.855" level="INFO">Locator found successfully.</msg>
-<status status="PASS" starttime="20230919 22:46:26.855" endtime="20230919 22:46:26.855"/>
-</kw>
-<msg timestamp="20230919 22:46:26.855" level="INFO">${tafel_orderId} = True</msg>
-<status status="PASS" starttime="20230919 22:46:26.855" endtime="20230919 22:46:26.855"/>
-</kw>
-<if>
-<branch type="IF" condition="${tafel_orderId} == ${true}">
-<kw name="Get Text" library="Browser">
-<var>${table_name}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-time</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:26.875" level="INFO">Text: 'Restaurant (8)'</msg>
-<msg timestamp="20230919 22:46:26.875" level="INFO">${table_name} = Restaurant (8)</msg>
-<status status="PASS" starttime="20230919 22:46:26.855" endtime="20230919 22:46:26.875"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>Table:${SPACE*5}${table_name}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:26.875" endtime="20230919 22:46:26.888"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${table_orderId}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchenrow-id</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:26.919" level="INFO">Text: '2648 (#115993711)'</msg>
-<msg timestamp="20230919 22:46:26.919" level="INFO">${table_orderId} = 2648 (#115993711)</msg>
-<status status="PASS" starttime="20230919 22:46:26.888" endtime="20230919 22:46:26.919"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${SPACE*3}${table_orderId}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:26.919" endtime="20230919 22:46:26.919"/>
-</kw>
-<kw name="Get Elements" library="Browser">
-<var>@{fetch_orderlist}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr</arg>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
-for all matched elements by ``selector``.</doc>
-<msg timestamp="20230919 22:46:26.919" level="INFO">Found Locator@div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=0,Locator@div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=1,Locator@div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=2 Locators successfully.</msg>
-<msg timestamp="20230919 22:46:26.919" level="INFO">@{fetch_orderlist} = [ div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=0 | div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;...</msg>
-<status status="PASS" starttime="20230919 22:46:26.919" endtime="20230919 22:46:26.919"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${menu_count}</var>
-<arg>${fetch_orderlist}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20230919 22:46:26.919" level="INFO">Length is 3</msg>
-<msg timestamp="20230919 22:46:26.919" level="INFO">${menu_count} = 3</msg>
-<status status="PASS" starttime="20230919 22:46:26.919" endtime="20230919 22:46:26.919"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${tr_index}</var>
-<arg>1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:26.919" level="INFO">${tr_index} = 1</msg>
-<status status="PASS" starttime="20230919 22:46:26.919" endtime="20230919 22:46:26.919"/>
-</kw>
-<for flavor="IN">
-<var>${element}</var>
-<value>@{fetch_orderlist}</value>
-<iter>
-<var name="${element}">div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=0</var>
-<kw name="Get Text" library="Browser">
-<var>${order_quantity}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(1)</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:26.953" level="INFO">Text: '1x'</msg>
-<msg timestamp="20230919 22:46:26.953" level="INFO">${order_quantity} = 1x</msg>
-<status status="PASS" starttime="20230919 22:46:26.919" endtime="20230919 22:46:26.953"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${order_category}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(2)&gt;b</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:26.970" level="INFO">Text: '[Beer] Tap Beer(Heineken)'</msg>
-<msg timestamp="20230919 22:46:26.970" level="INFO">${order_category} = [Beer] Tap Beer(Heineken)</msg>
-<status status="PASS" starttime="20230919 22:46:26.953" endtime="20230919 22:46:26.970"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${SPACE*6} ${order_quantity}${SPACE*2}${order_category}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:26.970" endtime="20230919 22:46:26.970"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${tr_index}</var>
-<arg>${tr_index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:26.970" level="INFO">${tr_index} = 2</msg>
-<status status="PASS" starttime="20230919 22:46:26.970" endtime="20230919 22:46:26.970"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:26.919" endtime="20230919 22:46:26.970"/>
-</iter>
-<iter>
-<var name="${element}">div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=1</var>
-<kw name="Get Text" library="Browser">
-<var>${order_quantity}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(1)</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:26.992" level="INFO">Text: '1x'</msg>
-<msg timestamp="20230919 22:46:26.992" level="INFO">${order_quantity} = 1x</msg>
-<status status="PASS" starttime="20230919 22:46:26.970" endtime="20230919 22:46:26.992"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${order_category}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(2)&gt;b</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:27.008" level="INFO">Text: '[Beer] non alcohol'</msg>
-<msg timestamp="20230919 22:46:27.008" level="INFO">${order_category} = [Beer] non alcohol</msg>
-<status status="PASS" starttime="20230919 22:46:26.992" endtime="20230919 22:46:27.008"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${SPACE*6} ${order_quantity}${SPACE*2}${order_category}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:27.008" endtime="20230919 22:46:27.008"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${tr_index}</var>
-<arg>${tr_index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:27.008" level="INFO">${tr_index} = 3</msg>
-<status status="PASS" starttime="20230919 22:46:27.008" endtime="20230919 22:46:27.008"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:26.970" endtime="20230919 22:46:27.008"/>
-</iter>
-<iter>
-<var name="${element}">div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr &gt;&gt; nth=2</var>
-<kw name="Get Text" library="Browser">
-<var>${order_quantity}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(1)</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:27.048" level="INFO">Text: '1x'</msg>
-<msg timestamp="20230919 22:46:27.048" level="INFO">${order_quantity} = 1x</msg>
-<status status="PASS" starttime="20230919 22:46:27.008" endtime="20230919 22:46:27.051"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${order_category}</var>
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(${dataId_index})&gt;div.kitchen-table-wrapper&gt;&gt;tbody&gt;tr:nth-child(${tr_index})&gt;td:nth-child(2)&gt;b</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<msg timestamp="20230919 22:46:27.067" level="INFO">Text: '[Beer] Grolsch'</msg>
-<msg timestamp="20230919 22:46:27.067" level="INFO">${order_category} = [Beer] Grolsch</msg>
-<status status="PASS" starttime="20230919 22:46:27.051" endtime="20230919 22:46:27.067"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${SPACE*6} ${order_quantity}${SPACE*2}${order_category}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:27.067" endtime="20230919 22:46:27.067"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${tr_index}</var>
-<arg>${tr_index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20230919 22:46:27.067" level="INFO">${tr_index} = 4</msg>
-<status status="PASS" starttime="20230919 22:46:27.067" endtime="20230919 22:46:27.067"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:27.008" endtime="20230919 22:46:27.067"/>
-</iter>
-<status status="PASS" starttime="20230919 22:46:26.919" endtime="20230919 22:46:27.067"/>
-</for>
-<kw name="Click" library="Browser">
-<arg>div.content&gt;div#kitchen-orders&gt;div[data-id]:nth-child(1)&gt;button:has-text("Ready")</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" starttime="20230919 22:46:27.067" endtime="20230919 22:46:27.126"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>**************************************${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" starttime="20230919 22:46:27.126" endtime="20230919 22:46:27.126"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:26.855" endtime="20230919 22:46:27.126"/>
-</branch>
-<branch type="ELSE IF" condition="${tafel_orderId} == ${false}">
-<kw name="Click" library="Browser">
-<arg>button#reload-kitchenbuddy</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:27.126" endtime="20230919 22:46:27.126"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:27.126" endtime="20230919 22:46:27.126"/>
-</kw>
-<kw name="Get Text" library="Browser">
-<var>${reload_oreder}</var>
-<arg>div#kitchen-orders:has-text("There are no orders yet.")</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:27.126" endtime="20230919 22:46:27.126"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${reload_oreder}</arg>
-<arg>${NO_ORDERS_EN}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:27.126" endtime="20230919 22:46:27.126"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>Hey!! All orders are ready and we are happy to serve and hence '${reload_oreder}'${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:27.126" endtime="20230919 22:46:27.126"/>
-</kw>
-<status status="NOT RUN" starttime="20230919 22:46:27.126" endtime="20230919 22:46:27.126"/>
-</branch>
-<status status="PASS" starttime="20230919 22:46:26.855" endtime="20230919 22:46:27.126"/>
-</if>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230919 22:46:29.127" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230919 22:46:27.126" endtime="20230919 22:46:29.127"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:26.855" endtime="20230919 22:46:29.127"/>
-</iter>
-<status status="PASS" starttime="20230919 22:46:20.149" endtime="20230919 22:46:29.127"/>
-</for>
-<status status="PASS" starttime="20230919 22:46:20.127" endtime="20230919 22:46:29.127"/>
-</branch>
-<status status="PASS" starttime="20230919 22:46:20.127" endtime="20230919 22:46:29.127"/>
-</if>
-<kw name="File Should Exist" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<doc>Fails unless the given ``path`` points to an existing file.</doc>
-<msg timestamp="20230919 22:46:29.127" level="INFO" html="true">File '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;' exists.</msg>
-<status status="PASS" starttime="20230919 22:46:29.127" endtime="20230919 22:46:29.127"/>
-</kw>
-<kw name="Get File Size" library="OperatingSystem">
-<var>${esize}</var>
-<arg>${ORDERS_LIST}</arg>
-<doc>Returns and logs file size as an integer in bytes.</doc>
-<msg timestamp="20230919 22:46:29.127" level="INFO" html="true">Size of file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;' is 0 bytes.</msg>
-<msg timestamp="20230919 22:46:29.127" level="INFO">${esize} = 0</msg>
-<status status="PASS" starttime="20230919 22:46:29.127" endtime="20230919 22:46:29.127"/>
-</kw>
-<if>
-<branch type="IF" condition="${esize} == 0">
-<kw name="Log" library="BuiltIn">
-<arg>Oops! File is not flushed properly before load orders!</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230919 22:46:29.130" level="INFO">Oops! File is not flushed properly before load orders!</msg>
-<status status="PASS" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.127" endtime="20230919 22:46:29.130"/>
-</branch>
-<branch type="ELSE">
-<for flavor="IN">
-<var>${filecontent}</var>
-<value>@{retrieve_ordersdata}</value>
-<iter>
-<var name="${filecontent}"/>
-<kw name="Get Length" library="BuiltIn">
-<var>${length}</var>
-<arg>${filecontent}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${length} == 0</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</kw>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>${filecontent}${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</kw>
-<status status="NOT RUN" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</iter>
-<status status="NOT RUN" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</for>
-<kw name="Append To List" library="Collections">
-<arg>${retrieve_ordersdata}</arg>
-<arg>All orders are served success! Eetsmakelijk!!${\n}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</kw>
-<status status="NOT RUN" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</branch>
-<status status="PASS" starttime="20230919 22:46:29.127" endtime="20230919 22:46:29.130"/>
-</if>
-<for flavor="IN">
-<var>${element}</var>
-<value>@{retrieve_ordersdata}</value>
-<iter>
-<var name="${element}">No.of active customer orders:'4'
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.130" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</iter>
-<iter>
-<var name="${element}">Table:     Restaurant (26)
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.130" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</iter>
-<iter>
-<var name="${element}">   2645 (#115993695)
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.130" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</iter>
-<iter>
-<var name="${element}">       1x  [Vegan Idli] vegan ghee podi idli
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.130" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.130"/>
-</iter>
-<iter>
-<var name="${element}">**************************************
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.138" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.138" endtime="20230919 22:46:29.138"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.138" endtime="20230919 22:46:29.138"/>
-</iter>
-<iter>
-<var name="${element}">Table:     Restaurant (3)
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.138" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.138" endtime="20230919 22:46:29.138"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.138" endtime="20230919 22:46:29.138"/>
-</iter>
-<iter>
-<var name="${element}">   2646 (#115993701)
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.138" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.138" endtime="20230919 22:46:29.138"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.138" endtime="20230919 22:46:29.138"/>
-</iter>
-<iter>
-<var name="${element}">       1x  [Vegan Chaat] Vegan Chat Platter
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.138" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.138" endtime="20230919 22:46:29.138"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.138" endtime="20230919 22:46:29.138"/>
-</iter>
-<iter>
-<var name="${element}">       1x  [Vegan Chaat] vegan vada pav
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.138" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.138" endtime="20230919 22:46:29.138"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.138" endtime="20230919 22:46:29.138"/>
-</iter>
-<iter>
-<var name="${element}">**************************************
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.147" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.138" endtime="20230919 22:46:29.147"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.138" endtime="20230919 22:46:29.147"/>
-</iter>
-<iter>
-<var name="${element}">Table:     Restaurant (32)
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.147" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.147" endtime="20230919 22:46:29.147"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.147" endtime="20230919 22:46:29.147"/>
-</iter>
-<iter>
-<var name="${element}">   2647 (#115993707)
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.147" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.147" endtime="20230919 22:46:29.147"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.147" endtime="20230919 22:46:29.147"/>
-</iter>
-<iter>
-<var name="${element}">       1x  [Uthappam] Onion Uthappam
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.147" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.147" endtime="20230919 22:46:29.147"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.147" endtime="20230919 22:46:29.147"/>
-</iter>
-<iter>
-<var name="${element}">       1x  [Uthappam] Onion Podi Uthappam
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.147" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.147" endtime="20230919 22:46:29.147"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.147" endtime="20230919 22:46:29.147"/>
-</iter>
-<iter>
-<var name="${element}">       2x  [Uthappam] Tomato Chilly Uthappam
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.155" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.147" endtime="20230919 22:46:29.155"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.147" endtime="20230919 22:46:29.155"/>
-</iter>
-<iter>
-<var name="${element}">       1x  [Uthappam] vegetable uthappam
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.155" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.155" endtime="20230919 22:46:29.155"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.155" endtime="20230919 22:46:29.155"/>
-</iter>
-<iter>
-<var name="${element}">**************************************
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.167" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.155" endtime="20230919 22:46:29.168"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.155" endtime="20230919 22:46:29.168"/>
-</iter>
-<iter>
-<var name="${element}">Table:     Restaurant (8)
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.168" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.168" endtime="20230919 22:46:29.168"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.168" endtime="20230919 22:46:29.168"/>
-</iter>
-<iter>
-<var name="${element}">   2648 (#115993711)
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.171" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.168" endtime="20230919 22:46:29.171"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.168" endtime="20230919 22:46:29.171"/>
-</iter>
-<iter>
-<var name="${element}">       1x  [Beer] Tap Beer(Heineken)
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.172" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.172" endtime="20230919 22:46:29.172"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.171" endtime="20230919 22:46:29.172"/>
-</iter>
-<iter>
-<var name="${element}">       1x  [Beer] non alcohol
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.172" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.172" endtime="20230919 22:46:29.172"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.172" endtime="20230919 22:46:29.172"/>
-</iter>
-<iter>
-<var name="${element}">       1x  [Beer] Grolsch
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.172" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.172" endtime="20230919 22:46:29.172"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.172" endtime="20230919 22:46:29.172"/>
-</iter>
-<iter>
-<var name="${element}">**************************************
-</var>
-<kw name="Append To File" library="OperatingSystem">
-<arg>${ORDERS_LIST}</arg>
-<arg>${element}</arg>
-<arg>encoding=UTF-8</arg>
-<doc>Appends the given content to the specified file.</doc>
-<msg timestamp="20230919 22:46:29.172" level="INFO" html="true">Appended to file '&lt;a href="file://C:\TestQA\Twilight\automation\foodstore\Orders.txt"&gt;C:\TestQA\Twilight\automation\foodstore\Orders.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20230919 22:46:29.172" endtime="20230919 22:46:29.172"/>
-</kw>
-<status status="PASS" starttime="20230919 22:46:29.172" endtime="20230919 22:46:29.172"/>
-</iter>
-<status status="PASS" starttime="20230919 22:46:29.130" endtime="20230919 22:46:29.172"/>
-</for>
-<status status="PASS" starttime="20230919 22:46:09.926" endtime="20230919 22:46:29.172"/>
+<msg timestamp="20231009 22:19:39.915" level="INFO">Text: '€ 10,00'</msg>
+<msg timestamp="20231009 22:19:39.915" level="INFO">${item_price} = € 10,00</msg>
+<status status="PASS" starttime="20231009 22:19:39.897" endtime="20231009 22:19:39.915"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{order_set}</var>
+<arg>orderNo=${orderId}</arg>
+<arg>tableNo=${tb}</arg>
+<arg>quantity=${item_quantity}</arg>
+<arg>itemName=${item_name}</arg>
+<arg>itemCategory=starters</arg>
+<arg>rank=3</arg>
+<arg>uuid=null</arg>
+<arg>itemStatus=open</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231009 22:19:39.928" level="INFO">&amp;{order_set} = { orderNo=117713944 | tableNo=28 | quantity=1 | itemName=Chole Bhature | itemCategory=starters | rank=3 | uuid=null | itemStatus=open }</msg>
+<status status="PASS" starttime="20231009 22:19:39.928" endtime="20231009 22:19:39.928"/>
 </kw>
 <kw name="Log" library="BuiltIn">
-<arg>Test execution done!!</arg>
+<arg>Fetch generated dictionary data:&gt;&gt;&gt;&gt;${order_set}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230919 22:46:29.172" level="INFO">Test execution done!!</msg>
-<status status="PASS" starttime="20230919 22:46:29.172" endtime="20230919 22:46:29.172"/>
+<msg timestamp="20231009 22:19:39.928" level="INFO">Fetch generated dictionary data:&gt;&gt;&gt;&gt;{'orderNo': '117713944', 'tableNo': 28, 'quantity': 1, 'itemName': 'Chole Bhature', 'itemCategory': 'starters', 'rank': '3', 'uuid': 'null', 'itemStatus': 'open'}</msg>
+<status status="PASS" starttime="20231009 22:19:39.928" endtime="20231009 22:19:39.928"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${TABLE_ORDERS}</arg>
+<arg>${order_set}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231009 22:19:39.928" endtime="20231009 22:19:39.928"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>After add dict to list:${TABLE_ORDERS}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:39.928" level="INFO">After add dict to list:[{'orderNo': '117713944', 'tableNo': 28, 'quantity': 1, 'itemName': 'Chole Bhature', 'itemCategory': 'starters', 'rank': '3', 'uuid': 'null', 'itemStatus': 'open'}]</msg>
+<status status="PASS" starttime="20231009 22:19:39.928" endtime="20231009 22:19:39.930"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${ITEMNAMES_SUBSET_TABLEORDERS}</arg>
+<arg>${item_name}</arg>
+<arg>${orderId}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231009 22:19:39.930" endtime="20231009 22:19:39.931"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${iData}</var>
+<arg>${iData} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231009 22:19:39.931" level="INFO">${iData} = 1</msg>
+<status status="PASS" starttime="20231009 22:19:39.931" endtime="20231009 22:19:39.931"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:39.864" endtime="20231009 22:19:39.931"/>
+</iter>
+<iter>
+<var name="${menuItem}">//tbody/tr[@data-i] &gt;&gt; nth=1</var>
+<kw name="Get Attribute" library="Browser">
+<var>${item_quantity}</var>
+<arg>//tbody/tr[@data-i="${iData}"]/td[1]/input</arg>
+<arg>value</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<msg timestamp="20231009 22:19:39.942" level="INFO">Attribute is: '1'</msg>
+<msg timestamp="20231009 22:19:39.942" level="INFO">${item_quantity} = 1</msg>
+<status status="PASS" starttime="20231009 22:19:39.931" endtime="20231009 22:19:39.942"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${item_quantity}</var>
+<arg>${item_quantity}</arg>
+<arg>${None}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231009 22:19:39.942" level="INFO">${item_quantity} = 1</msg>
+<status status="PASS" starttime="20231009 22:19:39.942" endtime="20231009 22:19:39.942"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${item_name}</var>
+<arg>//tr[@data-i="${iData}"]/td[@class="desc"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231009 22:19:39.959" level="INFO">Text: 'Dal Makhni\n'</msg>
+<msg timestamp="20231009 22:19:39.959" level="INFO">${item_name} = Dal Makhni
+</msg>
+<status status="PASS" starttime="20231009 22:19:39.942" endtime="20231009 22:19:39.959"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${item_name}</var>
+<arg>${item_name}</arg>
+<arg>\n</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20231009 22:19:39.959" level="INFO">${item_name} = Dal Makhni</msg>
+<status status="PASS" starttime="20231009 22:19:39.959" endtime="20231009 22:19:39.959"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${item_price}</var>
+<arg>//tr[@data-i="${iData}"]/td[@class="price"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231009 22:19:39.975" level="INFO">Text: '€ 10,00'</msg>
+<msg timestamp="20231009 22:19:39.975" level="INFO">${item_price} = € 10,00</msg>
+<status status="PASS" starttime="20231009 22:19:39.959" endtime="20231009 22:19:39.975"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{order_set}</var>
+<arg>orderNo=${orderId}</arg>
+<arg>tableNo=${tb}</arg>
+<arg>quantity=${item_quantity}</arg>
+<arg>itemName=${item_name}</arg>
+<arg>itemCategory=starters</arg>
+<arg>rank=3</arg>
+<arg>uuid=null</arg>
+<arg>itemStatus=open</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231009 22:19:39.975" level="INFO">&amp;{order_set} = { orderNo=117713944 | tableNo=28 | quantity=1 | itemName=Dal Makhni | itemCategory=starters | rank=3 | uuid=null | itemStatus=open }</msg>
+<status status="PASS" starttime="20231009 22:19:39.975" endtime="20231009 22:19:39.975"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Fetch generated dictionary data:&gt;&gt;&gt;&gt;${order_set}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:39.975" level="INFO">Fetch generated dictionary data:&gt;&gt;&gt;&gt;{'orderNo': '117713944', 'tableNo': 28, 'quantity': 1, 'itemName': 'Dal Makhni', 'itemCategory': 'starters', 'rank': '3', 'uuid': 'null', 'itemStatus': 'open'}</msg>
+<status status="PASS" starttime="20231009 22:19:39.975" endtime="20231009 22:19:39.975"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${TABLE_ORDERS}</arg>
+<arg>${order_set}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231009 22:19:39.975" endtime="20231009 22:19:39.975"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>After add dict to list:${TABLE_ORDERS}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:39.975" level="INFO">After add dict to list:[{'orderNo': '117713944', 'tableNo': 28, 'quantity': 1, 'itemName': 'Chole Bhature', 'itemCategory': 'starters', 'rank': '3', 'uuid': 'null', 'itemStatus': 'open'}, {'orderNo': '117713944', 'tableNo': 28, 'quantity': 1, 'itemName': 'Dal Makhni', 'itemCategory': 'starters', 'rank': '3', 'uuid': 'null', 'itemStatus': 'open'}]</msg>
+<status status="PASS" starttime="20231009 22:19:39.975" endtime="20231009 22:19:39.975"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${ITEMNAMES_SUBSET_TABLEORDERS}</arg>
+<arg>${item_name}</arg>
+<arg>${orderId}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231009 22:19:39.975" endtime="20231009 22:19:39.975"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${iData}</var>
+<arg>${iData} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231009 22:19:39.975" level="INFO">${iData} = 2</msg>
+<status status="PASS" starttime="20231009 22:19:39.975" endtime="20231009 22:19:39.975"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:39.931" endtime="20231009 22:19:39.975"/>
+</iter>
+<iter>
+<var name="${menuItem}">//tbody/tr[@data-i] &gt;&gt; nth=2</var>
+<kw name="Get Attribute" library="Browser">
+<var>${item_quantity}</var>
+<arg>//tbody/tr[@data-i="${iData}"]/td[1]/input</arg>
+<arg>value</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<msg timestamp="20231009 22:19:39.991" level="INFO">Attribute is: '1'</msg>
+<msg timestamp="20231009 22:19:39.991" level="INFO">${item_quantity} = 1</msg>
+<status status="PASS" starttime="20231009 22:19:39.975" endtime="20231009 22:19:39.991"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${item_quantity}</var>
+<arg>${item_quantity}</arg>
+<arg>${None}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231009 22:19:39.991" level="INFO">${item_quantity} = 1</msg>
+<status status="PASS" starttime="20231009 22:19:39.991" endtime="20231009 22:19:39.991"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${item_name}</var>
+<arg>//tr[@data-i="${iData}"]/td[@class="desc"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231009 22:19:40.018" level="INFO">Text: 'Tomato Chilly Uthappam\n'</msg>
+<msg timestamp="20231009 22:19:40.018" level="INFO">${item_name} = Tomato Chilly Uthappam
+</msg>
+<status status="PASS" starttime="20231009 22:19:39.991" endtime="20231009 22:19:40.018"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${item_name}</var>
+<arg>${item_name}</arg>
+<arg>\n</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20231009 22:19:40.018" level="INFO">${item_name} = Tomato Chilly Uthappam</msg>
+<status status="PASS" starttime="20231009 22:19:40.018" endtime="20231009 22:19:40.018"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${item_price}</var>
+<arg>//tr[@data-i="${iData}"]/td[@class="price"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231009 22:19:40.032" level="INFO">Text: '€ 8,50'</msg>
+<msg timestamp="20231009 22:19:40.032" level="INFO">${item_price} = € 8,50</msg>
+<status status="PASS" starttime="20231009 22:19:40.018" endtime="20231009 22:19:40.032"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{order_set}</var>
+<arg>orderNo=${orderId}</arg>
+<arg>tableNo=${tb}</arg>
+<arg>quantity=${item_quantity}</arg>
+<arg>itemName=${item_name}</arg>
+<arg>itemCategory=starters</arg>
+<arg>rank=3</arg>
+<arg>uuid=null</arg>
+<arg>itemStatus=open</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231009 22:19:40.032" level="INFO">&amp;{order_set} = { orderNo=117713944 | tableNo=28 | quantity=1 | itemName=Tomato Chilly Uthappam | itemCategory=starters | rank=3 | uuid=null | itemStatus=open }</msg>
+<status status="PASS" starttime="20231009 22:19:40.032" endtime="20231009 22:19:40.032"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Fetch generated dictionary data:&gt;&gt;&gt;&gt;${order_set}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:40.032" level="INFO">Fetch generated dictionary data:&gt;&gt;&gt;&gt;{'orderNo': '117713944', 'tableNo': 28, 'quantity': 1, 'itemName': 'Tomato Chilly Uthappam', 'itemCategory': 'starters', 'rank': '3', 'uuid': 'null', 'itemStatus': 'open'}</msg>
+<status status="PASS" starttime="20231009 22:19:40.032" endtime="20231009 22:19:40.032"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${TABLE_ORDERS}</arg>
+<arg>${order_set}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231009 22:19:40.032" endtime="20231009 22:19:40.032"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>After add dict to list:${TABLE_ORDERS}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:40.032" level="INFO">After add dict to list:[{'orderNo': '117713944', 'tableNo': 28, 'quantity': 1, 'itemName': 'Chole Bhature', 'itemCategory': 'starters', 'rank': '3', 'uuid': 'null', 'itemStatus': 'open'}, {'orderNo': '117713944', 'tableNo': 28, 'quantity': 1, 'itemName': 'Dal Makhni', 'itemCategory': 'starters', 'rank': '3', 'uuid': 'null', 'itemStatus': 'open'}, {'orderNo': '117713944', 'tableNo': 28, 'quantity': 1, 'itemName': 'Tomato Chilly Uthappam', 'itemCategory': 'starters', 'rank': '3', 'uuid': 'null', 'itemStatus': 'open'}]</msg>
+<status status="PASS" starttime="20231009 22:19:40.032" endtime="20231009 22:19:40.032"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${ITEMNAMES_SUBSET_TABLEORDERS}</arg>
+<arg>${item_name}</arg>
+<arg>${orderId}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231009 22:19:40.032" endtime="20231009 22:19:40.032"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${iData}</var>
+<arg>${iData} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231009 22:19:40.032" level="INFO">${iData} = 3</msg>
+<status status="PASS" starttime="20231009 22:19:40.032" endtime="20231009 22:19:40.032"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:39.975" endtime="20231009 22:19:40.032"/>
+</iter>
+<status status="PASS" starttime="20231009 22:19:39.864" endtime="20231009 22:19:40.032"/>
+</for>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>ordersession</arg>
+<arg>${APIURL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20231009 22:19:40.032" level="INFO">Creating Session using : alias=ordersession, url=http://92.70.63.97:1880, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231009 22:19:40.032" endtime="20231009 22:19:40.032"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231009 22:19:40.032" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20231009 22:19:40.032" endtime="20231009 22:19:40.032"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>ordersession</arg>
+<arg>${endpoint}</arg>
+<arg>json=${TABLE_ORDERS}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">POST Request : url=http://92.70.63.97:1880/openOrders 
+ path_url=/openOrders 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '498'} 
+ body=b'[{"orderNo": "117713944", "tableNo": 28, "quantity": 1, "itemName": "Chole Bhature", "itemCategory": "starters", "rank": "3", "uuid": "null", "itemStatus": "open"}, {"orderNo": "117713944", "tableNo": 28, "quantity": 1, "itemName": "Dal Makhni", "itemCategory": "starters", "rank": "3", "uuid": "null", "itemStatus": "open"}, {"orderNo": "117713944", "tableNo": 28, "quantity": 1, "itemName": "Tomato Chilly Uthappam", "itemCategory": "starters", "rank": "3", "uuid": "null", "itemStatus": "open"}]' 
+ </msg>
+<msg timestamp="20231009 22:19:40.097" level="INFO">POST Response : url=http://92.70.63.97:1880/openOrders 
+ status=200, reason=OK 
+ headers={'Access-Control-Allow-Origin': '*', 'X-Content-Type-Options': 'nosniff', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '451', 'ETag': 'W/"1c3-OHqeGSpXEA3DhUjfESuzaMY6PCA"', 'Vary': 'Accept-Encoding', 'Date': 'Mon, 09 Oct 2023 20:19:39 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body=[{"orderNo":"117713944","tableNo":28,"quantity":1,"itemName":"Chole Bhature","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"},{"orderNo":"117713944","tableNo":28,"quantity":1,"itemName":"Dal Makhni","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"},{"orderNo":"117713944","tableNo":28,"quantity":1,"itemName":"Tomato Chilly Uthappam","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"}] 
+ </msg>
+<msg timestamp="20231009 22:19:40.097" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231009 22:19:40.032" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Get response POST call status code':${response.status_code}'</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">Get response POST call status code':200'</msg>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Retrieve JSON response&lt;&lt;${response.content}&gt;&gt;</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">Retrieve JSON response&lt;&lt;[{"orderNo":"117713944","tableNo":28,"quantity":1,"itemName":"Chole Bhature","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"},{"orderNo":"117713944","tableNo":28,"quantity":1,"itemName":"Dal Makhni","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"},{"orderNo":"117713944","tableNo":28,"quantity":1,"itemName":"Tomato Chilly Uthappam","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"}]&gt;&gt;</msg>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${res_status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">${res_status_code} = 200</msg>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${res_status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${response_json}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">${response_json} = [{"orderNo":"117713944","tableNo":28,"quantity":1,"itemName":"Chole Bhature","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"},{"orderNo":"117713944","tableNo":28,"quantity":1,"i...</msg>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<for flavor="IN">
+<var>${assertItem}</var>
+<value>@{ITEMNAMES_SUBSET_TABLEORDERS}</value>
+<iter>
+<var name="${assertItem}"/>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">beofre Assert item:</msg>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">${assertItem} = </msg>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</iter>
+<iter>
+<var name="${assertItem}">Chole Bhature</var>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">beofre Assert item:Chole Bhature</msg>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">${assertItem} = Chole Bhature</msg>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</iter>
+<iter>
+<var name="${assertItem}">117713944</var>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">beofre Assert item:117713944</msg>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">${assertItem} = 117713944</msg>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</iter>
+<iter>
+<var name="${assertItem}">Dal Makhni</var>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">beofre Assert item:Dal Makhni</msg>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">${assertItem} = Dal Makhni</msg>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</iter>
+<iter>
+<var name="${assertItem}">117713944</var>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">beofre Assert item:117713944</msg>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:40.097" level="INFO">${assertItem} = 117713944</msg>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.097"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.113"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.113"/>
+</iter>
+<iter>
+<var name="${assertItem}">Tomato Chilly Uthappam</var>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:40.113" level="INFO">beofre Assert item:Tomato Chilly Uthappam</msg>
+<status status="PASS" starttime="20231009 22:19:40.113" endtime="20231009 22:19:40.113"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:40.113" level="INFO">${assertItem} = Tomato Chilly Uthappam</msg>
+<status status="PASS" starttime="20231009 22:19:40.113" endtime="20231009 22:19:40.113"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:40.113" endtime="20231009 22:19:40.113"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:40.113" endtime="20231009 22:19:40.113"/>
+</iter>
+<iter>
+<var name="${assertItem}">117713944</var>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:40.113" level="INFO">beofre Assert item:117713944</msg>
+<status status="PASS" starttime="20231009 22:19:40.113" endtime="20231009 22:19:40.113"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:40.113" level="INFO">${assertItem} = 117713944</msg>
+<status status="PASS" starttime="20231009 22:19:40.113" endtime="20231009 22:19:40.113"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:40.113" endtime="20231009 22:19:40.113"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:40.113" endtime="20231009 22:19:40.113"/>
+</iter>
+<status status="PASS" starttime="20231009 22:19:40.097" endtime="20231009 22:19:40.113"/>
+</for>
+<kw name="Click" library="Browser">
+<arg>button.tables</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20231009 22:19:40.113" endtime="20231009 22:19:40.150"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${tIndex}</var>
+<arg>${tIndex} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231009 22:19:40.151" level="INFO">${tIndex} = 2</msg>
+<status status="PASS" starttime="20231009 22:19:40.151" endtime="20231009 22:19:40.151"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:38.731" endtime="20231009 22:19:40.151"/>
+</iter>
+<iter>
+<var name="${t_orderId}">//div[@class="popup-content"]/div[@table-id][@order-id] &gt;&gt; nth=1</var>
+<kw name="Wait For Elements State" library="Browser">
+<arg>(//div[@table-id][@order-id])[${tIndex}]</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20231009 22:19:40.367" level="INFO">Waited for Element with selector (//div[@table-id][@order-id])[2] at state visible</msg>
+<status status="PASS" starttime="20231009 22:19:40.152" endtime="20231009 22:19:40.367"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${order_table}</var>
+<arg>(//div[@table-id][@order-id])[${tIndex}]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231009 22:19:40.384" level="INFO">Text: '36\n8,00'</msg>
+<msg timestamp="20231009 22:19:40.384" level="INFO">${order_table} = 36
+8,00</msg>
+<status status="PASS" starttime="20231009 22:19:40.368" endtime="20231009 22:19:40.384"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${order_table}</var>
+<arg>${order_table}</arg>
+<arg>\n</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20231009 22:19:40.384" level="INFO">${order_table} = 36_8,00</msg>
+<status status="PASS" starttime="20231009 22:19:40.384" endtime="20231009 22:19:40.384"/>
+</kw>
+<kw name="Split String From Right" library="String">
+<var>${tb}</var>
+<var>${price}</var>
+<arg>${order_table}</arg>
+<arg>_</arg>
+<doc>Splits the ``string`` using ``separator`` starting from right.</doc>
+<msg timestamp="20231009 22:19:40.384" level="INFO">${tb} = 36</msg>
+<msg timestamp="20231009 22:19:40.384" level="INFO">${price} = 8,00</msg>
+<status status="PASS" starttime="20231009 22:19:40.384" endtime="20231009 22:19:40.384"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${tb}</var>
+<arg>${tb}</arg>
+<arg>${None}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231009 22:19:40.385" level="INFO">${tb} = 36</msg>
+<status status="PASS" starttime="20231009 22:19:40.384" endtime="20231009 22:19:40.385"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${t_orderId}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20231009 22:19:40.385" endtime="20231009 22:19:40.632"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231009 22:19:41.633" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231009 22:19:40.632" endtime="20231009 22:19:41.633"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>div#pos-ticket&gt;h2[data-org]</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20231009 22:19:41.648" level="INFO">Waited for Element with selector div#pos-ticket&gt;h2[data-org] at state visible</msg>
+<status status="PASS" starttime="20231009 22:19:41.633" endtime="20231009 22:19:41.648"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${orderId}</var>
+<arg>div#pos-ticket&gt;h2[data-org] &gt;span</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231009 22:19:41.666" level="INFO">Text: '#115992741'</msg>
+<msg timestamp="20231009 22:19:41.666" level="INFO">${orderId} = #115992741</msg>
+<status status="PASS" starttime="20231009 22:19:41.648" endtime="20231009 22:19:41.666"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${tableNum}</var>
+<arg>//div[@id="pos-ticket"]/h2[text()][@data-org="Order"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231009 22:19:41.680" level="INFO">Text: '36 #115992741'</msg>
+<msg timestamp="20231009 22:19:41.680" level="INFO">${tableNum} = 36 #115992741</msg>
+<status status="PASS" starttime="20231009 22:19:41.666" endtime="20231009 22:19:41.680"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${orderId}</var>
+<arg>${orderId}</arg>
+<arg>\#</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20231009 22:19:41.680" level="INFO">${orderId} = 115992741</msg>
+<status status="PASS" starttime="20231009 22:19:41.680" endtime="20231009 22:19:41.680"/>
+</kw>
+<kw name="Get Elements" library="Browser">
+<var>@{menuItems}</var>
+<arg>//tbody/tr[@data-i]</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<msg timestamp="20231009 22:19:41.684" level="INFO">Found Locator@//tbody/tr[@data-i] &gt;&gt; nth=0 Locators successfully.</msg>
+<msg timestamp="20231009 22:19:41.684" level="INFO">@{menuItems} = [ //tbody/tr[@data-i] &gt;&gt; nth=0 ]</msg>
+<status status="PASS" starttime="20231009 22:19:41.680" endtime="20231009 22:19:41.684"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${iData}</var>
+<arg>0</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231009 22:19:41.684" level="INFO">${iData} = 0</msg>
+<status status="PASS" starttime="20231009 22:19:41.684" endtime="20231009 22:19:41.684"/>
+</kw>
+<for flavor="IN">
+<var>${menuItem}</var>
+<value>@{menuItems}</value>
+<iter>
+<var name="${menuItem}">//tbody/tr[@data-i] &gt;&gt; nth=0</var>
+<kw name="Get Attribute" library="Browser">
+<var>${item_quantity}</var>
+<arg>//tbody/tr[@data-i="${iData}"]/td[1]/input</arg>
+<arg>value</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<msg timestamp="20231009 22:19:41.695" level="INFO">Attribute is: '2'</msg>
+<msg timestamp="20231009 22:19:41.695" level="INFO">${item_quantity} = 2</msg>
+<status status="PASS" starttime="20231009 22:19:41.684" endtime="20231009 22:19:41.695"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${item_quantity}</var>
+<arg>${item_quantity}</arg>
+<arg>${None}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231009 22:19:41.695" level="INFO">${item_quantity} = 2</msg>
+<status status="PASS" starttime="20231009 22:19:41.695" endtime="20231009 22:19:41.695"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${item_name}</var>
+<arg>//tr[@data-i="${iData}"]/td[@class="desc"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231009 22:19:41.700" level="INFO">Text: 'Tap Beer(Heineken)\n'</msg>
+<msg timestamp="20231009 22:19:41.711" level="INFO">${item_name} = Tap Beer(Heineken)
+</msg>
+<status status="PASS" starttime="20231009 22:19:41.695" endtime="20231009 22:19:41.711"/>
+</kw>
+<kw name="Replace String" library="String">
+<var>${item_name}</var>
+<arg>${item_name}</arg>
+<arg>\n</arg>
+<arg>${EMPTY}</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<msg timestamp="20231009 22:19:41.711" level="INFO">${item_name} = Tap Beer(Heineken)</msg>
+<status status="PASS" starttime="20231009 22:19:41.711" endtime="20231009 22:19:41.711"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${item_price}</var>
+<arg>//tr[@data-i="${iData}"]/td[@class="price"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20231009 22:19:41.711" level="INFO">Text: '€ 8,00'</msg>
+<msg timestamp="20231009 22:19:41.711" level="INFO">${item_price} = € 8,00</msg>
+<status status="PASS" starttime="20231009 22:19:41.711" endtime="20231009 22:19:41.711"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{order_set}</var>
+<arg>orderNo=${orderId}</arg>
+<arg>tableNo=${tb}</arg>
+<arg>quantity=${item_quantity}</arg>
+<arg>itemName=${item_name}</arg>
+<arg>itemCategory=starters</arg>
+<arg>rank=3</arg>
+<arg>uuid=null</arg>
+<arg>itemStatus=open</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231009 22:19:41.711" level="INFO">&amp;{order_set} = { orderNo=115992741 | tableNo=36 | quantity=2 | itemName=Tap Beer(Heineken) | itemCategory=starters | rank=3 | uuid=null | itemStatus=open }</msg>
+<status status="PASS" starttime="20231009 22:19:41.711" endtime="20231009 22:19:41.711"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Fetch generated dictionary data:&gt;&gt;&gt;&gt;${order_set}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:41.711" level="INFO">Fetch generated dictionary data:&gt;&gt;&gt;&gt;{'orderNo': '115992741', 'tableNo': 36, 'quantity': 2, 'itemName': 'Tap Beer(Heineken)', 'itemCategory': 'starters', 'rank': '3', 'uuid': 'null', 'itemStatus': 'open'}</msg>
+<status status="PASS" starttime="20231009 22:19:41.711" endtime="20231009 22:19:41.711"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${TABLE_ORDERS}</arg>
+<arg>${order_set}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231009 22:19:41.711" endtime="20231009 22:19:41.711"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>After add dict to list:${TABLE_ORDERS}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:41.711" level="INFO">After add dict to list:[{'orderNo': '117713944', 'tableNo': 28, 'quantity': 1, 'itemName': 'Chole Bhature', 'itemCategory': 'starters', 'rank': '3', 'uuid': 'null', 'itemStatus': 'open'}, {'orderNo': '117713944', 'tableNo': 28, 'quantity': 1, 'itemName': 'Dal Makhni', 'itemCategory': 'starters', 'rank': '3', 'uuid': 'null', 'itemStatus': 'open'}, {'orderNo': '117713944', 'tableNo': 28, 'quantity': 1, 'itemName': 'Tomato Chilly Uthappam', 'itemCategory': 'starters', 'rank': '3', 'uuid': 'null', 'itemStatus': 'open'}, {'orderNo': '115992741', 'tableNo': 36, 'quantity': 2, 'itemName': 'Tap Beer(Heineken)', 'itemCategory': 'starters', 'rank': '3', 'uuid': 'null', 'itemStatus': 'open'}]</msg>
+<status status="PASS" starttime="20231009 22:19:41.711" endtime="20231009 22:19:41.711"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${ITEMNAMES_SUBSET_TABLEORDERS}</arg>
+<arg>${item_name}</arg>
+<arg>${orderId}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20231009 22:19:41.711" endtime="20231009 22:19:41.711"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${iData}</var>
+<arg>${iData} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231009 22:19:41.711" level="INFO">${iData} = 1</msg>
+<status status="PASS" starttime="20231009 22:19:41.711" endtime="20231009 22:19:41.711"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:41.684" endtime="20231009 22:19:41.711"/>
+</iter>
+<status status="PASS" starttime="20231009 22:19:41.684" endtime="20231009 22:19:41.711"/>
+</for>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>ordersession</arg>
+<arg>${APIURL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20231009 22:19:41.711" level="INFO">Creating Session using : alias=ordersession, url=http://92.70.63.97:1880, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20231009 22:19:41.711" endtime="20231009 22:19:41.711"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${headers}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20231009 22:19:41.711" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20231009 22:19:41.711" endtime="20231009 22:19:41.711"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>ordersession</arg>
+<arg>${endpoint}</arg>
+<arg>json=${TABLE_ORDERS}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20231009 22:19:41.789" level="INFO">POST Request : url=http://92.70.63.97:1880/openOrders 
+ path_url=/openOrders 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '667'} 
+ body=b'[{"orderNo": "117713944", "tableNo": 28, "quantity": 1, "itemName": "Chole Bhature", "itemCategory": "starters", "rank": "3", "uuid": "null", "itemStatus": "open"}, {"orderNo": "117713944", "tableNo": 28, "quantity": 1, "itemName": "Dal Makhni", "itemCategory": "starters", "rank": "3", "uuid": "null", "itemStatus": "open"}, {"orderNo": "117713944", "tableNo": 28, "quantity": 1, "itemName": "Tomato Chilly Uthappam", "itemCategory": "starters", "rank": "3", "uuid": "null", "itemStatus": "open"}, {"orderNo": "115992741", "tableNo": 36, "quantity": 2, "itemName": "Tap Beer(Heineken)", "itemCategory": "starters", "rank": "3", "uuid": "null", "itemStatus": "open"}]' 
+ </msg>
+<msg timestamp="20231009 22:19:41.789" level="INFO">POST Response : url=http://92.70.63.97:1880/openOrders 
+ status=200, reason=OK 
+ headers={'Access-Control-Allow-Origin': '*', 'X-Content-Type-Options': 'nosniff', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '604', 'ETag': 'W/"25c-antECo8NxrSjbsDgfahprdfTBSY"', 'Vary': 'Accept-Encoding', 'Date': 'Mon, 09 Oct 2023 20:19:41 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=5'} 
+ body=[{"orderNo":"117713944","tableNo":28,"quantity":1,"itemName":"Chole Bhature","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"},{"orderNo":"117713944","tableNo":28,"quantity":1,"itemName":"Dal Makhni","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"},{"orderNo":"117713944","tableNo":28,"quantity":1,"itemName":"Tomato Chilly Uthappam","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"},{"orderNo":"115992741","tableNo":36,"quantity":2,"itemName":"Tap Beer(Heineken)","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"}] 
+ </msg>
+<msg timestamp="20231009 22:19:41.789" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231009 22:19:41.711" endtime="20231009 22:19:41.789"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Get response POST call status code':${response.status_code}'</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:41.791" level="INFO">Get response POST call status code':200'</msg>
+<status status="PASS" starttime="20231009 22:19:41.789" endtime="20231009 22:19:41.791"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Retrieve JSON response&lt;&lt;${response.content}&gt;&gt;</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:41.793" level="INFO">Retrieve JSON response&lt;&lt;[{"orderNo":"117713944","tableNo":28,"quantity":1,"itemName":"Chole Bhature","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"},{"orderNo":"117713944","tableNo":28,"quantity":1,"itemName":"Dal Makhni","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"},{"orderNo":"117713944","tableNo":28,"quantity":1,"itemName":"Tomato Chilly Uthappam","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"},{"orderNo":"115992741","tableNo":36,"quantity":2,"itemName":"Tap Beer(Heineken)","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"}]&gt;&gt;</msg>
+<status status="PASS" starttime="20231009 22:19:41.792" endtime="20231009 22:19:41.793"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${res_status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:41.794" level="INFO">${res_status_code} = 200</msg>
+<status status="PASS" starttime="20231009 22:19:41.793" endtime="20231009 22:19:41.794"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${res_status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231009 22:19:41.794" endtime="20231009 22:19:41.794"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${response_json}</var>
+<arg>${response.content}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:41.795" level="INFO">${response_json} = [{"orderNo":"117713944","tableNo":28,"quantity":1,"itemName":"Chole Bhature","itemCategory":"starters","rank":"3","uuid":"null","itemStatus":"open"},{"orderNo":"117713944","tableNo":28,"quantity":1,"i...</msg>
+<status status="PASS" starttime="20231009 22:19:41.794" endtime="20231009 22:19:41.795"/>
+</kw>
+<for flavor="IN">
+<var>${assertItem}</var>
+<value>@{ITEMNAMES_SUBSET_TABLEORDERS}</value>
+<iter>
+<var name="${assertItem}"/>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:41.796" level="INFO">beofre Assert item:</msg>
+<status status="PASS" starttime="20231009 22:19:41.796" endtime="20231009 22:19:41.796"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:41.796" level="INFO">${assertItem} = </msg>
+<status status="PASS" starttime="20231009 22:19:41.796" endtime="20231009 22:19:41.796"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:41.796" endtime="20231009 22:19:41.797"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:41.795" endtime="20231009 22:19:41.797"/>
+</iter>
+<iter>
+<var name="${assertItem}">Chole Bhature</var>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:41.797" level="INFO">beofre Assert item:Chole Bhature</msg>
+<status status="PASS" starttime="20231009 22:19:41.797" endtime="20231009 22:19:41.797"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:41.797" level="INFO">${assertItem} = Chole Bhature</msg>
+<status status="PASS" starttime="20231009 22:19:41.797" endtime="20231009 22:19:41.797"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:41.797" endtime="20231009 22:19:41.797"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:41.797" endtime="20231009 22:19:41.797"/>
+</iter>
+<iter>
+<var name="${assertItem}">117713944</var>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:41.798" level="INFO">beofre Assert item:117713944</msg>
+<status status="PASS" starttime="20231009 22:19:41.797" endtime="20231009 22:19:41.798"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:41.798" level="INFO">${assertItem} = 117713944</msg>
+<status status="PASS" starttime="20231009 22:19:41.798" endtime="20231009 22:19:41.798"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:41.798" endtime="20231009 22:19:41.798"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:41.797" endtime="20231009 22:19:41.798"/>
+</iter>
+<iter>
+<var name="${assertItem}">Dal Makhni</var>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:41.798" level="INFO">beofre Assert item:Dal Makhni</msg>
+<status status="PASS" starttime="20231009 22:19:41.798" endtime="20231009 22:19:41.798"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:41.798" level="INFO">${assertItem} = Dal Makhni</msg>
+<status status="PASS" starttime="20231009 22:19:41.798" endtime="20231009 22:19:41.798"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:41.799" endtime="20231009 22:19:41.799"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:41.798" endtime="20231009 22:19:41.799"/>
+</iter>
+<iter>
+<var name="${assertItem}">117713944</var>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:41.799" level="INFO">beofre Assert item:117713944</msg>
+<status status="PASS" starttime="20231009 22:19:41.799" endtime="20231009 22:19:41.799"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:41.799" level="INFO">${assertItem} = 117713944</msg>
+<status status="PASS" starttime="20231009 22:19:41.799" endtime="20231009 22:19:41.799"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:41.799" endtime="20231009 22:19:41.800"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:41.799" endtime="20231009 22:19:41.800"/>
+</iter>
+<iter>
+<var name="${assertItem}">Tomato Chilly Uthappam</var>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:41.801" level="INFO">beofre Assert item:Tomato Chilly Uthappam</msg>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:41.801" level="INFO">${assertItem} = Tomato Chilly Uthappam</msg>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:41.800" endtime="20231009 22:19:41.801"/>
+</iter>
+<iter>
+<var name="${assertItem}">117713944</var>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:41.801" level="INFO">beofre Assert item:117713944</msg>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:41.801" level="INFO">${assertItem} = 117713944</msg>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</iter>
+<iter>
+<var name="${assertItem}">Tap Beer(Heineken)</var>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:41.801" level="INFO">beofre Assert item:Tap Beer(Heineken)</msg>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:41.801" level="INFO">${assertItem} = Tap Beer(Heineken)</msg>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</iter>
+<iter>
+<var name="${assertItem}">115992741</var>
+<kw name="Log" library="BuiltIn">
+<arg>beofre Assert item:${assertItem}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:41.801" level="INFO">beofre Assert item:115992741</msg>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${assertItem}</var>
+<arg>${assertItem}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20231009 22:19:41.801" level="INFO">${assertItem} = 115992741</msg>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${response_json}</arg>
+<arg>${assertItem}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.801"/>
+</iter>
+<status status="PASS" starttime="20231009 22:19:41.795" endtime="20231009 22:19:41.801"/>
+</for>
+<kw name="Click" library="Browser">
+<arg>button.tables</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20231009 22:19:41.801" endtime="20231009 22:19:41.846"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${tIndex}</var>
+<arg>${tIndex} + 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231009 22:19:41.846" level="INFO">${tIndex} = 3</msg>
+<status status="PASS" starttime="20231009 22:19:41.846" endtime="20231009 22:19:41.846"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:40.151" endtime="20231009 22:19:41.846"/>
+</iter>
+<status status="PASS" starttime="20231009 22:19:38.731" endtime="20231009 22:19:41.846"/>
+</for>
+<kw name="Click" library="Browser">
+<arg>//div[contains(@class, "popup popup-tables")]//button[@class="popup-close-x"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20231009 22:19:41.847" endtime="20231009 22:19:42.330"/>
+</kw>
+<status status="PASS" starttime="20231009 22:19:28.620" endtime="20231009 22:19:42.330"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Waiterbuddy Execution-done!</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231009 22:19:42.331" level="INFO">Waiterbuddy Execution-done!</msg>
+<status status="PASS" starttime="20231009 22:19:42.331" endtime="20231009 22:19:42.331"/>
 </kw>
 <kw name="As a &quot;Admin&quot; I want to close the browser" library="KitchenBuddy" type="TEARDOWN" sourcename="As a &quot;${ADMIN}&quot; I want to close the browser">
 <tag>logout</tag>
@@ -1623,43 +1469,37 @@ for all matched elements by ``selector``.</doc>
 <kw name="Take Screenshot" library="Browser">
 <tag>PageContent</tag>
 <doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<msg timestamp="20230919 22:46:29.336" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20230919 22:46:29.183" endtime="20230919 22:46:29.336"/>
+<msg timestamp="20231009 22:19:42.419" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231009 22:19:42.332" endtime="20231009 22:19:42.419"/>
 </kw>
 <kw name="Close Browser" library="Browser">
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<msg timestamp="20230919 22:46:29.620" level="INFO">Closed browser</msg>
-<status status="PASS" starttime="20230919 22:46:29.336" endtime="20230919 22:46:29.620"/>
+<msg timestamp="20231009 22:19:42.460" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20231009 22:19:42.419" endtime="20231009 22:19:42.460"/>
 </kw>
-<status status="PASS" starttime="20230919 22:46:29.182" endtime="20230919 22:46:29.620"/>
+<status status="PASS" starttime="20231009 22:19:42.332" endtime="20231009 22:19:42.460"/>
 </kw>
-<doc>this test case ensures that authorized user login and review and place orders ready for customer serve.</doc>
-<tag>food_orders</tag>
-<tag>kitchenbuddy</tag>
-<tag>master</tag>
+<doc>Fetch customer orders</doc>
+<tag>regression</tag>
 <tag>smoke</tag>
-<tag>waiterbuddy</tag>
-<status status="PASS" starttime="20230919 22:45:59.761" endtime="20230919 22:46:29.620"/>
+<status status="PASS" starttime="20231009 22:19:21.795" endtime="20231009 22:19:42.460"/>
 </test>
-<doc>As an administrator I have ability to create and run orders using kitchenbuddy portal.
-For Example: In this scenario open the portal and fetch customer orders and then submit order ready state.</doc>
-<status status="PASS" starttime="20230919 22:45:58.310" endtime="20230919 22:46:29.628"/>
+<doc>As an administrator I have ability to create orders using Waiterbuddy portal.
+For Example: In this scenario open the portal and fetch customer orders and then check given order in ready state.</doc>
+<status status="PASS" starttime="20231009 22:19:20.793" endtime="20231009 22:19:42.480"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">food_orders</stat>
-<stat pass="1" fail="0" skip="0">kitchenbuddy</stat>
-<stat pass="1" fail="0" skip="0">master</stat>
+<stat pass="1" fail="0" skip="0">regression</stat>
 <stat pass="1" fail="0" skip="0">smoke</stat>
-<stat pass="1" fail="0" skip="0">waiterbuddy</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="KitchenBuddy">KitchenBuddy</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="OrderList">OrderList</stat>
 </suite>
 </statistics>
 <errors>

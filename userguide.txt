@@ -1,20 +1,33 @@
 1) run tests in command line 
 
-without GUI:
-------------
-> robot -d .\results\ BROWSER:chrome .\MenuCart\KitchenBuddy.robot
+without GUI:  [ Bydefault tests are enabled non-gui]
+----------------------------------------------------
+> robot -d .\results\ -v BROWSER:chromium .\MenuCart\KitchenBuddy.robot
  
  (or)
+ 
+Enable With GUI load:
+--------------
+Go to file: C:\TestQA\Twilight\rf-2023\kitchenbuddy-vn\MenuCart\KitchenBuddy.resource
+**** line 31, replace below line(#13) ***
+New Browser    ${BROWSER}    headless=false    args=["--start-maximized"]
 
- With GUI load:
- --------------
-> robot -d .\results\ .\MenuCart\KitchenBuddy.robot
+NEW:
+------
+>robot -d .\results\ .\OrderBuddy\OrderList.robot
+
+Old:
+>robot -d .\results\ .\MenuCart\KitchenBuddy.robot
+
+**** results appears ****
+---------------------------
+<path-to folder>\kitchenbuddy-vn\results\report.html
 
 2) run batch file execution
 - refer file <batchrun.bat>
 - double click for run
 
 3) [simple way]
-- open <KitchenBuddy.robot> file
+- open <OrderBuddy/OrderBuddy.robot> file
 - right click
 - click on "Run Tests in Current File"
