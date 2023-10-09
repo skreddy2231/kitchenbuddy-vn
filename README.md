@@ -1,6 +1,11 @@
 # kitchenbuddy-vn
 # foodtest
-sample test repo
+Current framework is called Robot Framework, which is platform-independent, Although the core framework is implemented using python.
+- The "Browser" library from Playwright is part of the Playwright framework
+- To run web application(Web URL), used 'Browser' library
+- to run api tests(POST call), used 'requestslibrary' 
+
+RPA Framework is a collection of open-source libraries and tools for Robotic Process Automation (RPA), and it is designed to be used with both Robot Framework and Python. The goal is to offer well-documented and actively maintained core libraries for Software Robot Developers. The project is: 100% open-source.
 
 **Prerequisite**
 1. Install Node.js and NPM
@@ -12,7 +17,8 @@ sample test repo
 4. pip install robotframework
 5. pip install robotframework-browser
 6. rfbrowser init
-7. IDE tool: Visual studio code
+7. pip install robotframework-requests
+8. IDE tool: Visual studio code
      - Go to extensions
        - search for 'robocorp'
        - install "Robot Framework Language Server"

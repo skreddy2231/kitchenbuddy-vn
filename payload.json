@@ -1,0 +1,83 @@
+[
+    {
+        "orderNo": "115992733",
+        "uuid": null,
+        "itemName": "Chaat platter",
+        "tableNo": "31",
+        "itemCategory": "starters",
+        "quantity": "1",
+        "itemStatus": "open",
+        "rank": null
+    },
+    {
+        "orderNo": "{{randomNo}}",
+        "uuid": null,
+        "itemName": "kulfi",
+        "tableNo": "{{tableNo}}",
+        "itemCategory": "Deserts",
+        "quantity": "1",
+        "itemStatus": "open",
+        "rank": null
+    },
+    {
+        "orderNo": "{{randomNo}}",
+        "uuid": null,
+        "itemName": "Chaat Platters",
+        "tableNo": "{{tableNo}}",
+        "itemCategory": "Chaat",
+        "quantity": "1",
+        "itemNote": "no onion",
+        "itemStatus": "open",
+        "rank": null
+    },
+    {
+        "orderNo": "{{randomNo}}",
+        "uuid": null,
+        "itemName": "Coke",
+        "tableNo": "{{tableNo}}",
+        "itemCategory": "Cold Drinks",
+        "quantity": "1",
+        "itemStatus": "open",
+        "rank": null
+    },
+    {
+        "orderNo": "{{randomNo}}",
+        "uuid": null,
+        "itemName": "uthappam",
+        "tableNo": "{{tableNo}}",
+        "itemCategory": "Dosa",
+        "quantity": "1",
+        "itemStatus": "open",
+        "rank": null
+    },
+    {
+        "orderNo": "{{randomNo}}",
+        "uuid": null,
+        "itemName": "Masala dosa",
+        "tableNo": "{{tableNo}}",
+        "itemCategory": "Dosa",
+        "quantity": "1",
+        "itemStatus": "open",
+        "rank": null
+    },
+    {
+        "orderNo": "{{randomNo}}",
+        "uuid": null,
+        "itemName": "podi dosa",
+        "tableNo": "{{tableNo}}",
+        "itemCategory": "Dosa",
+        "quantity": "1",
+        "itemStatus": "open",
+        "rank": null
+    },
+    {
+        "orderNo": "{{randomNo}}",
+        "uuid": null,
+        "itemName": "ghee roast dosa",
+        "tableNo": "{{tableNo}}",
+        "itemCategory": "Dosa",
+        "quantity": "2",
+        "itemStatus": "open",
+        "rank": null
+    }
+]

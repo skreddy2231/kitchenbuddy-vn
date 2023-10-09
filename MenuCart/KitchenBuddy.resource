@@ -4,13 +4,23 @@ Documentation       This resource file consist of every keyword that's being use
 Library             Browser
 Library             OperatingSystem
 Library             Collections
+Library             String
+Library             requests
+Library             jsonschema
+Library             RequestsLibrary
 
 
 *** Variables ***
-${NO_ORDERS_EN}     There are no orders yet.
-${NO_ORDERS_NL}     Er zijn nog geen orders.
-${ORDERS_LIST}      ${EXECDIR}${/}Orders.txt
-${MSG}              ${EMPTY}
+${BROWSER}                          chromium
+${APIURL}                           http://92.70.63.97:1880
+${endpoint}                         /openOrders
+${NO_ORDERS_EN}                     There are no orders yet.
+${NO_ORDERS_NL}                     Er zijn nog geen orders.
+${ORDERS_LIST}                      ${EXECDIR}${/}Orders.txt
+${MSG}                              ${EMPTY}
+# ${KB_TITLE}    OrderBuddy - Vegnation
+@{TABLE_ORDERS}                     @{EMPTY}
+@{ITEMNAMES_SUBSET_TABLEORDERS}     ${EMPTY}
 
 
 *** Keywords ***
@@ -18,7 +28,7 @@ As a "${ADMIN}" I want to open KitchenBuddy portal
     [Documentation]    this keyword ensures user is able to open kitchenbuddy portal
     [Tags]    openpage
     [Arguments]    ${url}
-    New Browser    chromium    headless=false    args=["--start-maximized"]
+    New Browser    ${BROWSER}    headless=true    args=["--start-maximized"]
     # New Context    viewport={'width': 1920, 'height': 1080}
     New Context    viewport=${None}
     New Page    ${url}
@@ -30,13 +40,17 @@ Submit user details
     [Arguments]    ${username}    ${password}
     # Click    li[data-lang="en"]
     # sleep    2s
+    Fill data    ${username}    ${password}
+    Get Title    ==    OrderBuddy - Vegnation
+    # Wait For Elements State    span:has-text("Logged in as Vegnation")    visible
+    Take Screenshot
+
+Fill data
+    [Arguments]    ${username}    ${password}
     Fill Text    [name="login"]    ${username}
     Fill Text    [name="password"]    ${password}
     Click    id=login-button
     sleep    1s
-    Get Title    ==    OrderBuddy - Vegnation
-    Wait For Elements State    span:has-text("Logged in as Vegnation")    visible
-    Take Screenshot
 
 Check customers orders exists
     [Documentation]    this keyword ensures that check customers orders exists or not. there is not test failure if there were no orders!
@@ -49,10 +63,12 @@ Check customers orders exists
         Should Be Equal    ${orders_load}    ${NO_ORDERS_EN}
         Log    ${NO_ORDERS_EN}
         Set Test Variable    ${MSG}    ${NO_ORDERS_EN}
-    ELSE
-        Wait For Elements State    div.content>div#kitchen-orders>div[data-id]:nth-child(1)    visible
-        Set Test Variable    ${MSG}    *** There are active orders present! Please wait while fetching orders!! ***
     END
+    # ELSE
+    #    Scroll To Element    div.content>div#kitchen-orders>div[data-id]:nth-child(1)
+    #    Wait For Elements State    div.content>div#kitchen-orders>div[data-id]:nth-child(1)    visible
+    #    Set Test Variable    ${MSG}    *** There are active orders present! Please wait while fetching orders!! ***
+    # END
     RETURN    ${MSG}
 
 As a "${ADMIN}" I want to fetch customer orders
@@ -134,3 +150,93 @@ As a "${ADMIN}" I want to close the browser
     [Tags]    logout
     Take Screenshot
     Close Browser
+
+Navigate to Table menu item
+    [Tags]    tables
+    Wait For Elements State    button.tables    visible
+    Click    button.tables
+    Wait For Elements State    div[table-id]:nth-child(2)    visible
+
+Fetch each table order details
+    [Tags]    read_tbale_item
+    ${info}    Check customers orders exists
+    Log    Before fetch, check orders are placed!, ${info}
+    # Scroll To Element    (//div[@class="popup-content"]/div[@table-id][@order-id])[1]
+    @{table_ids}    Get Elements    //div[@class="popup-content"]/div[@table-id][@order-id]
+    ${table_id}    Get Length    ${table_ids}
+    ${tIndex}    Evaluate    1
+    # ****** Step1: Start fetch tafels *****
+    FOR    ${t_orderId}    IN    @{table_ids}
+        # Scroll To Element    (//div[@class="popup-content"]/div[@table-id][@order-id])[${tIndex}]
+        Wait For Elements State    (//div[@table-id][@order-id])[${tIndex}]    visible
+        ${order_table}    Get Text    (//div[@table-id][@order-id])[${tIndex}]
+        ${order_table}    Replace String    ${order_table}    \n    _
+        ${tb}    ${price}    Split String From Right    ${order_table}    _
+        ${tb}    Convert To Integer    ${tb}    ${None}
+        Click    ${t_orderId}
+        sleep    1s
+        Wait For Elements State    div#pos-ticket>h2[data-org]    visible
+        # Get Text    div#pos-ticket>h2[data-org]    ==    ${tb}
+        ${orderId}    Get Text    div#pos-ticket>h2[data-org] >span
+        ${tableNum}    Get Text    //div[@id="pos-ticket"]/h2[text()][@data-org="Order"]
+        ${orderId}    Replace String    ${orderId}    \#    ${EMPTY}
+        # ${orderId}    Convert To Integer    ${orderId}    ${None}
+        @{menuItems}    Get Elements    //tbody/tr[@data-i]
+        ${iData}    Evaluate    0
+        FOR    ${menuItem}    IN    @{menuItems}
+            ${item_quantity}    Get Attribute    //tbody/tr[@data-i="${iData}"]/td[1]/input    value
+            ${item_quantity}    Convert To Integer    ${item_quantity}    ${None}
+            ${item_name}    Get Text    //tr[@data-i="${iData}"]/td[@class="desc"]
+            ${item_name}    Replace String    ${item_name}    \n    ${EMPTY}
+            ${item_price}    Get Text    //tr[@data-i="${iData}"]/td[@class="price"]
+
+            # Generate table order in dictionary variable:
+            &{order_set}    Create Dictionary
+            ...    orderNo=${orderId}
+            ...    tableNo=${tb}
+            ...    quantity=${item_quantity}
+            ...    itemName=${item_name}
+            ...    itemCategory=starters
+            ...    rank=3
+            ...    uuid=null
+            ...    itemStatus=open
+            Log    Fetch generated dictionary data:>>>>${order_set}
+            Append To List    ${TABLE_ORDERS}    ${order_set}
+            Log    After add dict to list:${TABLE_ORDERS}
+            Append To List    ${ITEMNAMES_SUBSET_TABLEORDERS}    ${item_name}    ${orderId}
+            ${iData}    Evaluate    ${iData} + 1
+        END
+        # **** Send API - POST CALL ****
+        Create Session    ordersession    ${APIURL}
+        ${headers}    Create Dictionary    Content-Type=application/json
+        ${response}    POST On Session
+        ...    ordersession
+        ...    ${endpoint}
+        ...    json=${TABLE_ORDERS}
+        ...    headers=${headers}
+
+        # pretty post response JSON format::
+        # ${res_jsondata}    requests.${response_post}.json()
+        # ${response}    json.dumps(${res_jsondata}, indent=4)
+
+        Log    Get response POST call status code':${response.status_code}'
+        Log    Retrieve JSON response<<${response.content}>>
+
+        # ************ Response Validations ****************
+        ${res_status_code}    Convert To String    ${response.status_code}
+        Should Be Equal    ${res_status_code}    200
+        ${response_json}    Convert To String    ${response.content}
+        FOR    ${assertItem}    IN    @{ITEMNAMES_SUBSET_TABLEORDERS}
+            Log    beofre Assert item:${assertItem}
+            ${assertItem}    Convert To String    ${assertItem}
+            Should Contain    ${response_json}    ${assertItem}
+            # Should Contain    ${response_json}    ${tb}
+            # Should Contain    ${response_json}    ${item_name}
+        END
+        # Move to next table:
+        Click    button.tables
+        ${tIndex}    Evaluate    ${tIndex} + 1
+    END
+
+    # click on close icon from "Tafels" pop-up:
+    Click    //div[contains(@class, "popup popup-tables")]//button[@class="popup-close-x"]
