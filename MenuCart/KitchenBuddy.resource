@@ -20,7 +20,8 @@ ${ORDERS_LIST}                      ${EXECDIR}${/}Orders.txt
 ${MSG}                              ${EMPTY}
 # ${KB_TITLE}    OrderBuddy - Vegnation
 @{TABLE_ORDERS}                     @{EMPTY}
-@{ITEMNAMES_SUBSET_TABLEORDERS}     ${EMPTY}
+@{ITEMNAMES_SUBSET_TABLEORDERS}     @{EMPTY}
+${ORDERS}                           ${EXECDIR}${/}TafelOrders.json
 
 
 *** Keywords ***
@@ -159,6 +160,8 @@ Navigate to Table menu item
 
 Fetch each table order details
     [Tags]    read_tbale_item
+    Create File    ${ORDERS}
+    File Should Be Empty    ${ORDERS}
     ${info}    Check customers orders exists
     Log    Before fetch, check orders are placed!, ${info}
     # Scroll To Element    (//div[@class="popup-content"]/div[@table-id][@order-id])[1]
@@ -190,6 +193,21 @@ Fetch each table order details
             ${item_name}    Replace String    ${item_name}    \n    ${EMPTY}
             ${item_price}    Get Text    //tr[@data-i="${iData}"]/td[@class="price"]
 
+            # read description (or) remarks field if it's present only
+            ${remarks}    Get Element States
+            ...    //tr[@data-i="${iData}"]//td[@class="desc"]/span[@class="remark set"]
+            ...    then
+            ...    bool(value & visible)
+            IF    ${remarks} == True
+                ${item_name}    ${remark_!}    Split String From Right    ${item_name}    !
+                Click    //tr[@data-i="${iData}"]//td[@class="desc"]/span[@class="remark set"]
+                ${remark_set}    Get text
+                ...    //div[@class="popup-content"]/form/p/label[text()="Description"]/../input[@name="input"]
+                Click    //div[@id='input-popup']//button[text()="Ok"]
+            ELSE
+                ${remark_set}    Evaluate    "null"
+            END
+
             # Generate table order in dictionary variable:
             &{order_set}    Create Dictionary
             ...    orderNo=${orderId}
@@ -200,12 +218,19 @@ Fetch each table order details
             ...    rank=3
             ...    uuid=null
             ...    itemStatus=open
-            Log    Fetch generated dictionary data:>>>>${order_set}
+            ...    remarks=${remark_set}
             Append To List    ${TABLE_ORDERS}    ${order_set}
-            Log    After add dict to list:${TABLE_ORDERS}
             Append To List    ${ITEMNAMES_SUBSET_TABLEORDERS}    ${item_name}    ${orderId}
             ${iData}    Evaluate    ${iData} + 1
         END
+
+        # write to file JSON Body
+        ${sdict}    Evaluate    json.dumps(${TABLE_ORDERS})    json
+        # Log    type(sdict)
+        # FOR    ${element}    IN    @{TABLE_ORDERS}
+        Append To File    ${ORDERS}    ${sdict}
+        # END
+
         # **** Send API - POST CALL ****
         Create Session    ordersession    ${APIURL}
         ${headers}    Create Dictionary    Content-Type=application/json
@@ -215,13 +240,6 @@ Fetch each table order details
         ...    json=${TABLE_ORDERS}
         ...    headers=${headers}
 
-        # pretty post response JSON format::
-        # ${res_jsondata}    requests.${response_post}.json()
-        # ${response}    json.dumps(${res_jsondata}, indent=4)
-
-        Log    Get response POST call status code':${response.status_code}'
-        Log    Retrieve JSON response<<${response.content}>>
-
         # ************ Response Validations ****************
         ${res_status_code}    Convert To String    ${response.status_code}
         Should Be Equal    ${res_status_code}    200
@@ -230,12 +248,14 @@ Fetch each table order details
             Log    beofre Assert item:${assertItem}
             ${assertItem}    Convert To String    ${assertItem}
             Should Contain    ${response_json}    ${assertItem}
-            # Should Contain    ${response_json}    ${tb}
-            # Should Contain    ${response_json}    ${item_name}
+            # Move to next table:
+            Click    button.tables
+            ${tIndex}    Evaluate    ${tIndex} + 1
+
+            # empty json list before read next table
+            @{TABLE_ORDERS}    Create List
+            @{ITEMNAMES_SUBSET_TABLEORDERS}    Create List
         END
-        # Move to next table:
-        Click    button.tables
-        ${tIndex}    Evaluate    ${tIndex} + 1
     END
 
     # click on close icon from "Tafels" pop-up:
