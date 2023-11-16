@@ -22,6 +22,8 @@ ${MSG}                              ${EMPTY}
 @{TABLE_ORDERS}                     @{EMPTY}
 @{ITEMNAMES_SUBSET_TABLEORDERS}     @{EMPTY}
 ${ORDERS}                           ${EXECDIR}${/}TafelOrders.json
+@{ITEMNAMES_SUBSET_TABLEORDERS}     @{EMPTY}
+${ORDERS}                           ${EXECDIR}${/}TafelOrders.json
 
 
 *** Keywords ***
@@ -51,6 +53,7 @@ Fill data
     Fill Text    [name="login"]    ${username}
     Fill Text    [name="password"]    ${password}
     Click    id=login-button
+    Sleep    1s
     Sleep    1s
 
 Check customers orders exists
@@ -119,6 +122,7 @@ As a "${ADMIN}" I want to fetch customer orders
             ELSE IF    ${tafel_orderId} == ${false}
                 Click    button#reload-kitchenbuddy
                 Sleep    1s
+                Sleep    1s
                 ${reload_oreder}    Get Text    div#kitchen-orders:has-text("There are no orders yet.")
                 Should Be Equal    ${reload_oreder}    ${NO_ORDERS_EN}
                 Append To List
@@ -126,6 +130,7 @@ As a "${ADMIN}" I want to fetch customer orders
                 ...    Hey!! All orders are ready and we are happy to serve and hence '${reload_oreder}'${\n}
             END
             # ${dataId_index}    Evaluate    ${dataId_index} + 1
+            Sleep    2s    # <wait for 2sec time after click on ready button and tables sync>
             Sleep    2s    # <wait for 2sec time after click on ready button and tables sync>
         END
     END
@@ -162,6 +167,8 @@ Fetch each table order details
     [Tags]    read_tbale_item
     Create File    ${ORDERS}
     File Should Be Empty    ${ORDERS}
+    Create File    ${ORDERS}
+    File Should Be Empty    ${ORDERS}
     ${info}    Check customers orders exists
     Log    Before fetch, check orders are placed!, ${info}
     # Scroll To Element    (//div[@class="popup-content"]/div[@table-id][@order-id])[1]
@@ -170,6 +177,11 @@ Fetch each table order details
     ${tIndex}    Evaluate    1
     # ****** Step1: Start fetch tafels *****
     FOR    ${t_orderId}    IN    @{table_ids}
+        ${table_visible}    Get Element States
+        ...    (//div[@table-id][@order-id])[${tIndex}]
+        ...    then
+        ...    bool(value & visible)
+        Sleep    1s
         ${table_visible}    Get Element States
         ...    (//div[@table-id][@order-id])[${tIndex}]
         ...    then
@@ -186,6 +198,11 @@ Fetch each table order details
         ...    div#pos-ticket>h2[data-org]
         ...    then
         ...    bool(value & visible)
+        Sleep    1s
+        ${order_visible}    Get Element States
+        ...    div#pos-ticket>h2[data-org]
+        ...    then
+        ...    bool(value & visible)
         Wait For Elements State    div#pos-ticket>h2[data-org]    visible
         ${orderId}    Get Text    div#pos-ticket>h2[data-org] >span
         ${tableNum}    Get Text    //div[@id="pos-ticket"]/h2[text()][@data-org="Order"]
@@ -193,6 +210,10 @@ Fetch each table order details
         @{menuItems}    Get Elements    //tbody/tr[@data-i]
         ${iData}    Evaluate    0
         FOR    ${menuItem}    IN    @{menuItems}
+            ${getQuantity_no}    Get Element States
+            ...    //tbody/tr[@data-i="${iData}"]/td[1]/input
+            ...    then
+            ...    bool(value & visible)
             ${getQuantity_no}    Get Element States
             ...    //tbody/tr[@data-i="${iData}"]/td[1]/input
             ...    then
@@ -211,7 +232,6 @@ Fetch each table order details
             IF    ${remarks} == True
                 ${item_name}    ${remark_!}    Split String From Right    ${item_name}    !
                 Click    //tr[@data-i="${iData}"]//td[@class="desc"]/span[@class="remark set"]
-<<<<<<< HEAD
                 Sleep    1s
                 # Check product 'Description' field. For Dosa items it will be textarea.
                 ${product_remarks}    Run Keyword And Return Status    Get Element States
@@ -234,11 +254,6 @@ Fetch each table order details
                     ...    //div[@class="popup-content"]/form/p/label[text()="Description"]/../input[@name="input"]
                     Click    //div[@id='input-popup']//button[text()="Ok"]
                 END
-=======
-                ${remark_set}    Get text
-                ...    //div[@class="popup-content"]/form/p/label[text()="Description"]/../input[@name="input"]
-                Click    //div[@id='input-popup']//button[text()="Ok"]
->>>>>>> e71284425b8f3f19b705e33ef1d7b9390b8dbf55
             ELSE
                 ${remark_set}    Evaluate    "null"
             END
@@ -254,23 +269,15 @@ Fetch each table order details
             ...    uuid=null
             ...    itemStatus=open
             ...    remarks=${remark_set}
+            ...    remarks=${remark_set}
             Append To List    ${TABLE_ORDERS}    ${order_set}
             Append To List    ${ITEMNAMES_SUBSET_TABLEORDERS}    ${item_name}    ${orderId}
             ${iData}    Evaluate    ${iData} + 1
         END
 
-<<<<<<< HEAD
         # write Body into JSON file
         ${sdict}    Evaluate    json.dumps(${TABLE_ORDERS})    json
         Append To File    ${ORDERS}    ,${sdict}
-=======
-        # write to file JSON Body
-        ${sdict}    Evaluate    json.dumps(${TABLE_ORDERS})    json
-        # Log    type(sdict)
-        # FOR    ${element}    IN    @{TABLE_ORDERS}
-        Append To File    ${ORDERS}    ${sdict}
-        # END
->>>>>>> e71284425b8f3f19b705e33ef1d7b9390b8dbf55
 
         # **** Send API - POST CALL ****
         Create Session    ordersession    ${APIURL}
@@ -288,7 +295,6 @@ Fetch each table order details
         FOR    ${assertItem}    IN    @{ITEMNAMES_SUBSET_TABLEORDERS}
             ${assertItem}    Convert To String    ${assertItem}
             Should Contain    ${response_json}    ${assertItem}
-<<<<<<< HEAD
         END
         # Move to next table:
         Click    button.tables
@@ -298,16 +304,6 @@ Fetch each table order details
         # empty json list before read next table
         @{TABLE_ORDERS}    Create List
         @{ITEMNAMES_SUBSET_TABLEORDERS}    Create List
-=======
-            # Move to next table:
-            Click    button.tables
-            ${tIndex}    Evaluate    ${tIndex} + 1
-
-            # empty json list before read next table
-            @{TABLE_ORDERS}    Create List
-            @{ITEMNAMES_SUBSET_TABLEORDERS}    Create List
-        END
->>>>>>> e71284425b8f3f19b705e33ef1d7b9390b8dbf55
     END
 
     # click on close icon from "Tafels" pop-up:
