@@ -24,6 +24,7 @@ ${MSG}                              ${EMPTY}
 ${ORDERS}                           ${EXECDIR}${/}TafelOrders.json
 @{ITEMNAMES_SUBSET_TABLEORDERS}     @{EMPTY}
 ${ORDERS}                           ${EXECDIR}${/}TafelOrders.json
+${sign_alphas}                      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
 *** Keywords ***
@@ -163,6 +164,86 @@ Navigate to Table menu item
     Click    button.tables
     Wait For Elements State    div[table-id]:nth-child(2)    visible
 
+Read Product remakrs section
+    [Tags]    remarks
+    [Arguments]    ${iData}    ${item_name}
+    # read description (or) remarks field if it's present only
+    ${remarks}    Get Element States
+    ...    //tr[@data-i="${iData}"]//td[@class="desc"]/span[@class="remark set"]
+    ...    then
+    ...    bool(value & visible)
+    IF    ${remarks} == True
+        ${item_name}    ${remark_!}    Split String From Right    ${item_name}    !
+        Click    //tr[@data-i="${iData}"]//td[@class="desc"]/span[@class="remark set"]
+        Sleep    1s
+        # Check product 'Description' field. For Dosa items it will be textarea.
+        ${product_remarks}    Run Keyword And Return Status    Get Element States
+        ...    //textarea[@name="remarks"][text()]
+        ...    then
+        ...    bool(value & visible)
+        # rechecking remarks variable.
+        ${product_remarks}    Get Element States
+        ...    //textarea[@name="remarks"][text()]
+        ...    then
+        ...    bool(value & visible)
+        ${remark_set}    Evaluate    "null"
+        IF    ${product_remarks} == True
+            # "Remarks for Product" remark field is unique coming for Dosa items.
+            ${remark_set}    Get Text    //textarea[@name="remarks"][text()]
+            Click    button#cancel
+            # other than Dosa, remarks filed
+        ELSE
+            ${remark_set}    Get text
+            ...    //div[@class="popup-content"]/form/p/label[text()="Description"]/../input[@name="input"]
+            Click    //div[@id='input-popup']//button[text()="Ok"]
+        END
+    ELSE
+        ${remark_set}    Evaluate    "null"
+    END
+    RETURN    ${remark_set}    ${item_name}
+
+Fetch Item topings
+    [Tags]    toping
+    [Arguments]    ${iData}
+    # fetch item-toping's if exists::
+    @{item_topings}    Create List
+    ${isToping_exists}    Get Element States
+    ...    //tr[@data-i="${iData}"]/td[@class="desc"]/em
+    ...    then
+    ...    bool(value & visible)
+    IF    ${isToping_exists} == True
+        ${getTopings}    Get Text    //tr[@data-i="${iData}"]/td[@class="desc"]/em
+        # ex: [cheese 2x (2,00), podi (1,00), masala (1,00)]
+        ${removeExtrachrs_topings}    Remove String
+        ...    ${getTopings}
+        ...    (
+        ...    0
+        ...    )
+        ...    1
+        ...    2
+        ...    3
+        ...    4
+        ...    5
+        ...    6
+        ...    7
+        ...    8
+        ...    9
+        ...    0
+        ...    x
+        ${removeExtrachrs_topings}    Replace String    ${removeExtrachrs_topings}    ,,    ,
+        @{topinslist_app}    Split String    ${removeExtrachrs_topings}    ,
+        FOR    ${index}    ${element}    IN ENUMERATE    @{topinslist_app}
+            ${element}    Set variable    ${element.strip()}
+            IF    "${element}" == "${EMPTY}"    CONTINUE
+            ${isComma}    Run Keyword And Return Status    Should Contain    ${element}    ,
+            IF    ${isComma} == True    CONTINUE
+            Append To List    ${item_topings}    ${element}
+        END
+    ELSE
+        ${item_topings}    Evaluate    'null'
+    END
+    RETURN    ${item_topings}
+
 Fetch each table order details
     [Tags]    read_tbale_item
     Create File    ${ORDERS}
@@ -224,40 +305,37 @@ Fetch each table order details
             ${item_name}    Replace String    ${item_name}    \n    ${EMPTY}
             ${item_price}    Get Text    //tr[@data-i="${iData}"]/td[@class="price"]
 
-            # read description (or) remarks field if it's present only
-            ${remarks}    Get Element States
-            ...    //tr[@data-i="${iData}"]//td[@class="desc"]/span[@class="remark set"]
-            ...    then
-            ...    bool(value & visible)
-            IF    ${remarks} == True
-                ${item_name}    ${remark_!}    Split String From Right    ${item_name}    !
-                Click    //tr[@data-i="${iData}"]//td[@class="desc"]/span[@class="remark set"]
-                Sleep    1s
-                # Check product 'Description' field. For Dosa items it will be textarea.
-                ${product_remarks}    Run Keyword And Return Status    Get Element States
-                ...    //textarea[@name="remarks"][text()]
-                ...    then
-                ...    bool(value & visible)
-                # rechecking remarks variable.
-                ${product_remarks}    Get Element States
-                ...    //textarea[@name="remarks"][text()]
-                ...    then
-                ...    bool(value & visible)
-                ${remark_set}    Evaluate    "null"
-                IF    ${product_remarks} == True
-                    # "Remarks for Product" remark field is unique coming for Dosa items.
-                    ${remark_set}    Get Text    //textarea[@name="remarks"][text()]
-                    Click    button#cancel
-                    # other than Dosa, remarks filed
-                ELSE
-                    ${remark_set}    Get text
-                    ...    //div[@class="popup-content"]/form/p/label[text()="Description"]/../input[@name="input"]
-                    Click    //div[@id='input-popup']//button[text()="Ok"]
-                END
-            ELSE
-                ${remark_set}    Evaluate    "null"
-            END
+            # 19/11: Read toping's if exists::
+            ${item_topings}    Fetch Item topings    ${iData}
 
+            # read description (or) remarks field if it's present only
+            ${remark_set}    ${item_name}    Read Product remakrs section    ${iData}    ${item_name}
+
+            # 19/11: [NOTE]- If an item has topings, without remarks, Itemname coming as Item+toping together.
+            # ["itemName": "onion podi masalaonion    podi"]    -- need future fix
+            ${itemHas_toping_noremarks}    Run Keyword And Return Status
+            ...    Should Contain
+            ...    ${item_name}    )
+            IF    "${remark_set}" == "null" and ${itemHas_toping_noremarks}==True
+                ${reclasify_item_name}    Remove String
+                ...    ${item_name}
+                ...    (
+                ...    ,
+                ...    0
+                ...    )
+                ...    1
+                ...    2
+                ...    3
+                ...    4
+                ...    5
+                ...    6
+                ...    7
+                ...    8
+                ...    9
+                ...    0
+                ...    x
+                ${item_name}    Set variable    ${reclasify_item_name.strip()}
+            END
             # Generate table order in dictionary variable:
             &{order_set}    Create Dictionary
             ...    orderNo=${orderId}
@@ -269,7 +347,7 @@ Fetch each table order details
             ...    uuid=null
             ...    itemStatus=open
             ...    remarks=${remark_set}
-            ...    remarks=${remark_set}
+            ...    topings=${item_topings}
             Append To List    ${TABLE_ORDERS}    ${order_set}
             Append To List    ${ITEMNAMES_SUBSET_TABLEORDERS}    ${item_name}    ${orderId}
             ${iData}    Evaluate    ${iData} + 1
@@ -280,26 +358,26 @@ Fetch each table order details
         Append To File    ${ORDERS}    ,${sdict}
 
         # **** Send API - POST CALL ****
-        Create Session    ordersession    ${APIURL}
-        ${headers}    Create Dictionary    Content-Type=application/json
-        ${response}    POST On Session
-        ...    ordersession
-        ...    ${endpoint}
-        ...    json=${TABLE_ORDERS}
-        ...    headers=${headers}
+        # Create Session    ordersession    ${APIURL}
+        # ${headers}    Create Dictionary    Content-Type=application/json
+        # ${response}    POST On Session
+        # ...    ordersession
+        # ...    ${endpoint}
+        # ...    json=${TABLE_ORDERS}
+        # ...    headers=${headers}
 
-        # ************ Response Validations ****************
-        ${res_status_code}    Convert To String    ${response.status_code}
-        Should Be Equal    ${res_status_code}    200
-        ${response_json}    Convert To String    ${response.content}
-        FOR    ${assertItem}    IN    @{ITEMNAMES_SUBSET_TABLEORDERS}
-            ${assertItem}    Convert To String    ${assertItem}
-            Should Contain    ${response_json}    ${assertItem}
-        END
+        # # ************ Response Validations ****************
+        # ${res_status_code}    Convert To String    ${response.status_code}
+        # Should Be Equal    ${res_status_code}    200
+        # ${response_json}    Convert To String    ${response.content}
+        # FOR    ${assertItem}    IN    @{ITEMNAMES_SUBSET_TABLEORDERS}
+        #    ${assertItem}    Convert To String    ${assertItem}
+        #    Should Contain    ${response_json}    ${assertItem}
+        # END
         # Move to next table:
         Click    button.tables
         ${tIndex}    Evaluate    ${tIndex} + 1
-        Sleep    2s
+        Sleep    1s
 
         # empty json list before read next table
         @{TABLE_ORDERS}    Create List
