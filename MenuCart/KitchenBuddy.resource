@@ -358,22 +358,22 @@ Fetch each table order details
         Append To File    ${ORDERS}    ,${sdict}
 
         # **** Send API - POST CALL ****
-        # Create Session    ordersession    ${APIURL}
-        # ${headers}    Create Dictionary    Content-Type=application/json
-        # ${response}    POST On Session
-        # ...    ordersession
-        # ...    ${endpoint}
-        # ...    json=${TABLE_ORDERS}
-        # ...    headers=${headers}
+        Create Session    ordersession    ${APIURL}
+        ${headers}    Create Dictionary    Content-Type=application/json
+        ${response}    POST On Session
+        ...    ordersession
+        ...    ${endpoint}
+        ...    json=${TABLE_ORDERS}
+        ...    headers=${headers}
 
-        # # ************ Response Validations ****************
-        # ${res_status_code}    Convert To String    ${response.status_code}
-        # Should Be Equal    ${res_status_code}    200
-        # ${response_json}    Convert To String    ${response.content}
-        # FOR    ${assertItem}    IN    @{ITEMNAMES_SUBSET_TABLEORDERS}
-        #    ${assertItem}    Convert To String    ${assertItem}
-        #    Should Contain    ${response_json}    ${assertItem}
-        # END
+        # ************ Response Validations ****************
+        ${res_status_code}    Convert To String    ${response.status_code}
+        Should Be Equal    ${res_status_code}    200
+        ${response_json}    Convert To String    ${response.content}
+        FOR    ${assertItem}    IN    @{ITEMNAMES_SUBSET_TABLEORDERS}
+            ${assertItem}    Convert To String    ${assertItem}
+            Should Contain    ${response_json}    ${assertItem}
+        END
         # Move to next table:
         Click    button.tables
         ${tIndex}    Evaluate    ${tIndex} + 1
